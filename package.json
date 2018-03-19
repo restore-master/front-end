@@ -7,7 +7,7 @@
     "build": "webpack",
     "lint": "eslint .",
     "test": "jest",
-    "watch": "webpack-dev-server --inline --hot"
+    "start": "webpack-dev-server --inline --hot"
   },
   "keywords": [],
   "author": "",
