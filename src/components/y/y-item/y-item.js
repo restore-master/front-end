@@ -33,6 +33,29 @@ class YItem extends React.Component {
         <p>Source: {this.props.y.source}</p>
         <p>Upper-Rooms: {this.props.y.upperRooms}</p>
         <p>Lower-Rooms: {this.props.y.lowerRooms}</p>
+        <p>Ceiling-Height: {this.props.y.ceilingHeight}</p>
+        <p>Ceiling-Description: {this.props.y.ceilingDescription}</p>
+        <p>Power/Heat: {this.props.y.powerHeat}</p>
+        <p>Flooring Type: {this.props.y.flooringType}</p>
+        <p>Type of Home: {this.props.y.typeOfHome}</p>
+        <p>Age of Home: {this.props.y.ageofHome}</p>
+        <p>Standing Water: {this.props.y.standingWater + '"'}</p>
+        <p>Foundation Type: {this.props.y.basement}</p>
+        <p>Crawlspace or slab: {this.props.y.crawlOrSlab}</p>
+        <p>Crawl or Attic Location: {this.props.y.crawlOrAtticAccessLocation}</p>
+        <p>Contents: {this.props.y.contents}</p>
+        <p>Access Permission: {this.props.y.accessPermissions}</p>
+        <p>Set Lockbox: {this.props.y.setLockBox}</p>
+        <p>Pets or Children: {this.props.y.petsOrChildren}</p>
+        <p>Special Needs: {this.props.y.specialNeeds}</p>
+        <p>Allergies: {this.props.y.RespiratoryOrAllergies}</p>
+        <p>Growth: {this.props.y.Growth}</p>
+        <p>Odors: {this.props.y.odor}</p>
+        <p>Monitors: {this.props.y.monitors}</p>
+        <p>Email: {this.props.y.customerEmail}</p>
+        <p>How did you Hear About us: {this.props.y.hearAboutUs}</p>
+        <p>Customers Adjuster: {this.props.y.adjuster}</p>
+        <p>Customers Agent: {this.props.y.customerAgent}</p>
         <button onClick={this.handleDelete}>delete</button>
         {renderIf(this.state.editing,
           <YForm
