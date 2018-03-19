@@ -6,11 +6,42 @@ class YForm extends React.Component {
     this.state = this.props.y
       ? this.props.y
       : {
-        name: '',
-        cost: '',
+        //Loss Details
+        source: '',
+        upperRooms: '',
+        lowerRooms: '',
+        ceilingHeight: '',
+        ceilingDescription: '',
+        powerHeat: '',
+        flooringType: '',
+        typeOfHome: '',
+        ageofHome: '',
+        standingWater: '',
+        Basement: '',
+        crawlOrSlab: '',
+        crawlOrAtticAccessLocation: '',
+        Contents: '',
+        // Considerations ie: allergies, authorization, etc
+        accessPermissions: '',
+        setLockBox: '',
+        petsOrChildren: '',
+        specialNeeds: '',
+        RespiratoryOrAllergies: '',
+        Growth: '',
+        Odor: '',
+        Monitors: '',
+        // Address/survey/mailing
+        lossIsMailingAddress: false,
+        email: '',
+        hearAboutUs: '',
+        adjuster: false,
+        customersAgent: '',
+        //Id and editing
         xId: this.props.xId,
         editing: false,
       };
+
+    //handlers
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -22,24 +53,31 @@ class YForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.onComplete(this.state);
-    this.setState({name: '', cost: '', editing: false});
+    this.setState({source: '', upperRooms: '', editing: false});
   }
 
   render() {
     return (
       <form className='y-form' onSubmit={this.handleSubmit}>
+        <h1> Loss Details </h1>
         <input
           type='text'
-          name='name'
-          value={this.state.name}
+          name='source'
+          value={this.state.source}
           onChange={this.handleChange}
-          placeholder='name'/>
+          placeholder='Source'/>
         <input
-          type='number'
-          name='cost'
-          value={this.state.cost}
+          type='text'
+          name='upperRooms'
+          value={this.state.upperRooms}
           onChange={this.handleChange}
-          placeholder='cost'/>
+          placeholder='Upper-Rooms Affected'/>
+        <input
+          type='text'
+          name='lowerRooms'
+          value={this.state.lowerRooms}
+          onChange={this.handleChange}
+          placeholder='Lower-Rooms Affected'/>
 
         <button type='submit'>{this.props.buttonText}</button>
       </form>

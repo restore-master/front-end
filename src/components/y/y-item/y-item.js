@@ -30,8 +30,9 @@ class YItem extends React.Component {
         className='y-item'
         key={this.props.y.id}
         onDoubleClick={this.handleEditing}>
-        <p>Y: {this.props.y.name}</p>
-        <p>Cost: {this.props.y.cost}</p>
+        <p>Source: {this.props.y.source}</p>
+        <p>Upper-Rooms: {this.props.y.upperRooms}</p>
+        <p>Lower-Rooms: {this.props.y.lowerRooms}</p>
         <button onClick={this.handleDelete}>delete</button>
         {renderIf(this.state.editing,
           <YForm
