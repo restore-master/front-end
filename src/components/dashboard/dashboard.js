@@ -8,7 +8,7 @@ class Dashboard extends React.Component {
   render() {
     return(
       <section className='dashboard'>
-        <h1>y tracker</h1>
+        <h1>Water Loss Tracker</h1>
 
         <XForm
           buttonText='create'
