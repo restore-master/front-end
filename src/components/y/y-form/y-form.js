@@ -132,6 +132,7 @@ class YForm extends React.Component {
           value={this.state.crawlOrSlab}
           onChange={this.handleChange}
           placeholder="Finished or Unfinished"/>
+
         <input
           type='text'
           name='crawlOrAtticAccessLocation'

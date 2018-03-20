@@ -20,6 +20,9 @@ class XForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.onComplete(this.state);
+
+    console.log('customer object being sent on submit, to POST request', this.state);
+
     this.setState({
       customerName: '',
       date: '',
