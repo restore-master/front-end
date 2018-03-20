@@ -1,6 +1,6 @@
 'use strict';
 
-require('dotenv').config({path: `${__dirname}/.dev.env`});
+require('dotenv').config();
 let production = process.env.NODE_ENV === 'production';
 
 const HtmlPlugin = require('html-webpack-plugin');
@@ -15,6 +15,7 @@ let plugins = [
   new EnvironmentPlugin(['NODE_ENV']),
   new DefinePlugin({
     __DEBUG__: JSON.stringify(!production),
+    __API_URL__: JSON.stringify(process.env.API_URL),
   }),
 ];
 
