@@ -49,10 +49,9 @@ class XItem extends React.Component {
           buttonText='create'
           onComplete={this.props.yCreate}/>
 
-
-        {renderIf(this.props.ys[this.props.x.id],
+        /*{renderIf(this.props.ys[this.props.x.id].length > 0,
           this.props.ys[this.props.x.id].map(y => <YItem key={y.id} y={y} />)
-        )}
+        )}*/
       </div>
     );
   };

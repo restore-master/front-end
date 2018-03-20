@@ -5,8 +5,8 @@ class Landing extends React.Component{
     return(
       <div>
         <h1>Water Loss Tracker</h1>
-        <p>checkout the dashboard page to create a form</p>
-        <p>checkout the reports page to view your forms</p>
+        <p>checkout the dashboard page to create and view forms</p>
+        <p>checkout the statistics page to view your form data</p>
       </div>
     );
 
