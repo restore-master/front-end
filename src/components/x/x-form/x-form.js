@@ -6,10 +6,11 @@ class XForm extends React.Component {
     this.state = this.props.x
       ? this.props.x
       : {
-        title: '',
+        customerName: '',
+        date: '',
       };
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);  
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e) {
@@ -19,18 +20,30 @@ class XForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.onComplete(this.state);
-    this.setState({title: ''});
+    console.log('customer object being sent on submit, to POST request', this.state);
+    this.setState({
+      customerName: '',
+      date: '',
+    });
   }
 
   render() {
     return (
       <form className='x-form' onSubmit={this.handleSubmit}>
-        <input 
+        <input
           type='text'
-          name='title'
-          value={this.state.title}
+          name='customerName'
+          value={this.state.customerName}
           onChange={this.handleChange}
-          placeholder='x name'
+          placeholder= "Customer's Name"
+        />
+
+        <input
+          type='datetime-local'
+          name='date'
+          value={this.state.date}
+          onChange={this.handleChange}
+          placeholder= "Todays Date"
         />
 
         <button type='submit'>{this.props.buttonText}</button>

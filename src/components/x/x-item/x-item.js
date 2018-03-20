@@ -34,7 +34,8 @@ class XItem extends React.Component {
       <div
         className='x-item'
         key={this.props.x.id}>
-        <p onDoubleClick={this.handleEditing}>X: {this.props.x.title}</p>
+        <p onDoubleClick={this.handleEditing}>Customer: {this.props.x.customerName}</p>
+        <p onDoubleClick={this.handleEditing}>date: {this.props.x.date}</p>
         <button onClick={this.handleDelete}>delete</button>
         {renderIf(this.state.editing,
           <XForm
@@ -48,10 +49,9 @@ class XItem extends React.Component {
           buttonText='create'
           onComplete={this.props.yCreate}/>
 
-
-        {renderIf(this.props.ys[this.props.x.id],
+        /*{renderIf(this.props.ys[this.props.x.id].length > 0,
           this.props.ys[this.props.x.id].map(y => <YItem key={y.id} y={y} />)
-        )}
+        )}*/
       </div>
     );
   };

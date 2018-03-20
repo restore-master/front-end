@@ -9,6 +9,7 @@ export default (state=initialState, action) => {
   case 'X_GET': return payload;
   case 'X_CREATE': 
     // if(payload.title === '') return new Error('submit a x title');
+    console.log('X_CREATE REDUCER BEING CALLED');
     return [...state, payload];
   case 'X_UPDATE': {
     // if(payload.title === '') return new Error('submit a x title');
