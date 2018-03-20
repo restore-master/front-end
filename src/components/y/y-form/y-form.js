@@ -7,6 +7,7 @@ class YForm extends React.Component {
       ? this.props.y
       : {
         //Loss Details
+        customer: this.props.xId,
         source: '',
         upperRooms: '',
         lowerRooms: '',
