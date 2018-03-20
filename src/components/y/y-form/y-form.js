@@ -131,7 +131,7 @@ class YForm extends React.Component {
           name='crawlOrSlab'
           value={this.state.crawlOrSlab}
           onChange={this.handleChange}
-          placeholder="Basement, Slab, or Crawlspace"/>
+          placeholder="Finished or Unfinished"/>
         <input
           type='text'
           name='crawlOrAtticAccessLocation'
