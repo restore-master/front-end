@@ -7,6 +7,8 @@ import {xDelete} from '../../../actions/x-actions';
 import YForm from '../../y/y-form/y-form';
 import {yCreate} from '../../../actions/y-actions';
 import YItem from '../../y/y-item/y-item';
+import * as xActions from '../../../actions/x-actions';
+import * as yActions from '../../../actions/y-actions';
 
 class XItem extends React.Component {
   constructor(props) {
@@ -57,13 +59,14 @@ class XItem extends React.Component {
 //   this.props.ys[this.props.x.id].map(y => <YItem key={y.id} y={y} />)
 // )}
 const mapStateToProps = state => ({
-  ys: state.ys,
+  x: state.x,
+  y: state.y,
 });
 
 const mapDispatchToProps = (dispatch, getState) => ({
-  xUpdate: x => dispatch(xUpdate(x)),
-  xDelete: x => dispatch(xDelete(x)),
-  yCreate: y => dispatch(yCreate(y)),
+  xUpdate: customer => dispatch(xActions.xUpdate(customer)),
+  xDelete: customer => dispatch(xActions.xDelete(customer)),
+  yCreate: report => dispatch(yActions.yCreate(report)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(XItem);

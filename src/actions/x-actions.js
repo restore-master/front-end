@@ -1,4 +1,3 @@
-import uuid from 'uuid/v4';
 import superagent from 'superagent';
 
 export const xGet = xs => ({
@@ -10,9 +9,10 @@ export const xCreate = x => {
   console.log('apiurl:', __API_URL__);
   superagent.post(`${__API_URL__}/customer`)
     .send(x)
-    // .then(response => {
-    //   return dispatch(xCreate(response.body));
-    // })
+    .then(response => {
+      console.log('response.body', response.body);
+      console.log('response.body.id', response.body._id);
+    })
     .catch(console.error);
   return {
     type: 'X_CREATE',

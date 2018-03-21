@@ -52,6 +52,7 @@ class YForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    console.log('handleSubmit this.state', this.state);
     this.props.onComplete(this.state);
     this.setState({source: '', upperRooms: '', editing: false});
   }

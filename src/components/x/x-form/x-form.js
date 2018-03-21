@@ -6,7 +6,7 @@ class XForm extends React.Component {
     this.state = this.props.x
       ? this.props.x
       : {
-        customerName: '',
+        name: '',
         date: '',
       };
     this.handleChange = this.handleChange.bind(this);
@@ -22,7 +22,7 @@ class XForm extends React.Component {
     this.props.onComplete(this.state);
     console.log('customer object being sent on submit, to POST request', this.state);
     this.setState({
-      customerName: '',
+      name: '',
       date: '',
     });
   }
@@ -32,8 +32,8 @@ class XForm extends React.Component {
       <form className='x-form' onSubmit={this.handleSubmit}>
         <input
           type='text'
-          name='customerName'
-          value={this.state.customerName}
+          name='name'
+          value={this.state.name}
           onChange={this.handleChange}
           placeholder= "Customer's Name"
         />
