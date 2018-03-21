@@ -64,7 +64,6 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = (dispatch, getState) => ({
-  createActionRequest: customer => dispatch(xActions.createActionRequest(customer)),
   xCreate: customer => dispatch(xActions.xCreate(customer)),
 });
 
