@@ -19,6 +19,7 @@ class App extends React.Component {
         <Provider store={store}>
           <BrowserRouter>
             <React.Fragment>
+              <Navbar/>
               <Route exact path="/" component={Landing}/>
               <Route exact path="/dashboard" component={Dashboard}/>
             </React.Fragment>
