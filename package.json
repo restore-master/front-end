@@ -4,10 +4,16 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
+    "start": "node index.js",
     "build": "webpack",
     "lint": "eslint .",
     "test": "jest",
-    "watch": "webpack-dev-server --inline --hot"
+    "test:watch": "jest --watchAll",
+    "watch": "webpack-dev-server --inline --hot",
+    "heroku-postbuild": "webpack -p --progress"
+  },
+  "engines": {
+    "node": "8.9.4"
   },
   "keywords": [],
   "author": "",
@@ -36,6 +42,7 @@
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
     "sass-loader": "^6.0.6",
+    "superagent": "^3.8.2",
     "uglifyjs-webpack-plugin": "^1.2.1",
     "url-loader": "^0.6.2",
     "uuid": "^3.2.1",

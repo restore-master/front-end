@@ -21,9 +21,6 @@ class App extends React.Component {
             <React.Fragment>
               <Navbar/>
               <Route exact path="/" component={Landing}/>
-              {/* <Route path="/welcome/:auth" component={props =>
-                 token ? <Redirect to="/dashboard"/> : <Landing {...props}/>}/> */}
-              {/* <Route path="/dashboard" component={Dashboard}/> */}
               <Route exact path="/dashboard" component={Dashboard}/>
             </React.Fragment>
           </BrowserRouter>
@@ -32,5 +29,8 @@ class App extends React.Component {
     );
   }
 };
+// {/* <Route path="/welcome/:auth" component={props =>
+//                  token ? <Redirect to="/dashboard"/> : <Landing {...props}/>}/> */}
+// {/* <Route path="/dashboard" component={Dashboard}/> */ }
 
 export default App;

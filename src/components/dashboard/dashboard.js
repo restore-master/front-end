@@ -4,6 +4,7 @@ import {xCreate} from '../../actions/x-actions';
 import {renderIf} from '../../lib/utils';
 import XForm from '../x/x-form/x-form';
 import XItem from '../x/x-item/x-item';
+import * as xActions from '../../actions/x-actions';
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -39,11 +40,11 @@ class Dashboard extends React.Component {
 
         )}
 
-        {renderIf(this.props.categories,
-          this.props.categories.map(x =>
+        {renderIf(this.props.customers,
+          this.props.customers.map(x =>
             <XItem
               x={x}
-              key={x.id}/>
+              key={x._id}/>
           )
         )}
 
@@ -58,12 +59,11 @@ class Dashboard extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  categories: state.categories,
-  ys: state.ys,
+  customers: state.x,
 });
 
-const mapDispatchToProps = (dispatch, getState) => ({
-  xCreate: x => dispatch(xCreate(x)),
+const mapDispatchToProps = (dispatch) => ({
+  xCreate: customer => dispatch(xActions.xCreate(customer)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
