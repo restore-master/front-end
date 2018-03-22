@@ -23,7 +23,7 @@ class Navbar extends React.Component {
             {renderIf(this.props.token,
               <React.Fragment>
                 <li><a href="/dashboard">Dashboard</a></li>
-                <li onClick={this.props.tokenDelete}><a href="/welcome/signin">Logout</a></li>
+                <li onClick={() => this.props.store.dispatch({type: 'TOKEN_DELETE'})}><a href="/welcome/signin">Logout</a></li>
               </React.Fragment>
             )}
           </ul>

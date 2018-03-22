@@ -6,4 +6,4 @@ import {createStore, applyMiddleware} from 'redux';
 let appStoreCreate = () =>
   createStore(reducer, applyMiddleware(thunk, reporter));
 
-export default () => createStore(reducer);
+export default appStoreCreate;
