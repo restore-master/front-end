@@ -10,6 +10,18 @@ const xPassIdAction = id => ({
   payload: id,
 });
 
+export const xGetAll = xs => dispatch => {
+  console.log('apiurl:', __API_URL__);
+  return superagent.get(`${__API_URL__}/customer`)
+    .send(xs)
+    .then(response => {
+      // console.log(response.body[0].name);
+      // console.log(response);
+      return dispatch(xGet(response.body));
+    })
+    .catch(console.error);
+};
+
 export const xCreate = x => dispatch => {
   console.log('apiurl:', __API_URL__);
   return superagent.post(`${__API_URL__}/customer`)

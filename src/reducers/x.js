@@ -6,9 +6,11 @@ export default (state=initialState, action) => {
   let {type, payload} = action;
 
   switch(type) {
-  case 'X_GET': return payload;
+  case 'X_GET':
+    console.log('X_GET HAS BEEN CALLED');
+    return payload;
   case 'X_ID_CREATE': return [...state, payload];
-  case 'X_CREATE': 
+  case 'X_CREATE':
     // if(payload.title === '') return new Error('submit a x title');
     console.log('X_CREATE REDUCER BEING CALLED');
     return [...state, payload];
@@ -21,4 +23,3 @@ export default (state=initialState, action) => {
   default: return state;
   }
 };
-

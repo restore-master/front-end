@@ -1,10 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {xCreate} from '../../actions/x-actions';
+import {CustomerCreate} from '../../actions/customer-actions';
 import {renderIf} from '../../lib/utils';
-import XForm from '../x/x-form/x-form';
-import XItem from '../x/x-item/x-item';
-import * as xActions from '../../actions/x-actions';
+import CustomerForm from '../customer/customer-form/customer-form';
+import CustomerItem from '../customer/customer-item/customer-item';
+import {CustomerGetAll, CustomerGet} from '../../actions/customer-actions';
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -23,6 +23,8 @@ class Dashboard extends React.Component {
 
   handleView() {
     this.setState({view: !this.state.view});
+    console.log(this.props.CustomerGetAll());
+    console.log(this.state);
   };
 
   render() {
@@ -36,20 +38,21 @@ class Dashboard extends React.Component {
         {renderIf(this.state.create,
           <XForm
             buttonText='create'
-            onComplete={this.props.xCreate}/>
+            onComplete={this.props.CustomerCreate}/>
 
         )}
 
-        {renderIf(this.props.customers,
+        {renderIf(this.props.customers && this.state.view === false && this.state.create === true,
           this.props.customers.map(x =>
-            <XItem
-              x={x}
-              key={x._id}/>
+            <CustomerItem/>
           )
         )}
 
         {renderIf(this.state.view,
-          <h3>reports</h3>
+          <div>
+            <h3>reports</h3>
+            <p>name:</p>
+          </div>
         )}
 
 
@@ -63,7 +66,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  xCreate: customer => dispatch(xActions.xCreate(customer)),
+  CustomerCreate: customer => dispatch(CustomerCreate(customer)),
+  CustomerGetAll: customer => dispatch(CustomerGetAll(customer)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

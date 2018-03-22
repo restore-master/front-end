@@ -36,8 +36,8 @@ class XItem extends React.Component {
       <div
         className='x-item'
         key={this.props.x.id}>
-        <p onDoubleClick={this.handleEditing}>Customer: {this.props.x.customerName}</p>
-        <p onDoubleClick={this.handleEditing}>date: {this.props.x.date}</p>
+        <p onDoubleClick={this.handleEditing}>Customer: {this.props.x[0].name}</p>
+        <p onDoubleClick={this.handleEditing}>date: {this.props.x[0].date}</p>
         <button onClick={this.handleDelete}>delete</button>
         {renderIf(this.state.editing,
           <XForm
@@ -50,6 +50,8 @@ class XItem extends React.Component {
           xId={this.props.x.id}
           buttonText='create'
           onComplete={this.props.yCreate}/>
+
+
       </div>
     );
   };

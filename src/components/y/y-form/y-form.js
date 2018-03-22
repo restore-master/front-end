@@ -38,7 +38,7 @@ class YForm extends React.Component {
         adjuster: '',
         customerAgent: '',
         //Id and editing
-        customer: this.props.x[0]._id,
+        customer: this.props._id,
         editing: false,
       };
 
