@@ -2,47 +2,34 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {renderIf} from '../../lib/utils';
 import CustomerItem from '../customer/customer-item/customer-item';
+import CustomerReportItem from './customer-report-item/customer-report-item';
 import {customerGetAll, customerGet} from '../../actions/customer-actions';
-
+import {reportGetAll, reportGet} from '../../actions/report-actions';
 
 class Reports extends React.Component{
-  constructor(props) {
-    super(props);
-    this.state = {
-      customer: this.props.customer ? this.props.customer : {},
-      report: this.props.report ? this.props.report : {},
-      view: false,
-    };
-    this.handleView = this.handleView.bind(this);
-  };
-
-  componentWillMount(){
+  componentWillMount() {
     this.props.customerGetAll();
-  }
-
-  handleView() {
-    this.setState({view: !this.state.view});
-    console.log(this.props);
-    console.log(this.state);
+    this.props.reportGetAll();
   };
 
   render(){
-    console.log('HELLO+++++========', this.state.customer);
+    console.log('HELLO+++++========', this.props.customer);
     return(
       <div>
         <h1>Water Loss Tracker</h1>
-        <button onClick={this.handleView}>View Forms</button>
-        {renderIf(this.state.view,
-          <h1>{console.log(this.props.customer)}</h1>
+        {renderIf(this.props.customer,
+          this.props.customer.map(customer =>
+            <CustomerReportItem
+              className="customer-report-item"
+              customer={customer}
+              key={customer._id}/>)
         )}
         <p>checkout the dashboard page to create and view forms</p>
         <p>YOLO SWAGGINS</p>
       </div>
     );
-
   }
 }
-
 
 const mapStateToProps = state => ({
   customer: state.customer,
@@ -51,6 +38,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = (dispatch, getState) => ({
   customerGetAll: customer => dispatch(customerGetAll(customer)),
+  reportGetAll: report => dispatch(reportGetAll(report)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Reports);
