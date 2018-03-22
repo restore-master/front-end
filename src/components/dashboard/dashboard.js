@@ -40,11 +40,11 @@ class Dashboard extends React.Component {
 
         )}
 
-        {renderIf(this.props.categories,
-          this.props.categories.map(x =>
+        {renderIf(this.props.customers,
+          this.props.customers.map(x =>
             <XItem
               x={x}
-              key={x.id}/>
+              key={x._id}/>
           )
         )}
 
@@ -59,11 +59,10 @@ class Dashboard extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  categories: state.categories,
-  ys: state.ys,
+  customers: state.x,
 });
 
-const mapDispatchToProps = (dispatch, getState) => ({
+const mapDispatchToProps = (dispatch) => ({
   xCreate: customer => dispatch(xActions.xCreate(customer)),
 });
 

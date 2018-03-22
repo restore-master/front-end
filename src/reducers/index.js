@@ -1,9 +1,8 @@
-import yReducer from './y';
-import xReducer from './x';
-import {combineReducers} from 'redux';
+import y from './y';
 import x from './x';
+import {combineReducers} from 'redux';
 
 export default combineReducers({
-  ys: yReducer,
-  categories: xReducer,
+  x,
+  y,
 });

@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 class YForm extends React.Component {
   constructor(props) {
@@ -37,7 +38,7 @@ class YForm extends React.Component {
         adjuster: '',
         customerAgent: '',
         //Id and editing
-        xId: this.props.xId,
+        customer: this.props.x[0]._id,
         editing: false,
       };
 
@@ -52,6 +53,7 @@ class YForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    console.log('handleSubmit this.state', this.state);
     this.props.onComplete(this.state);
     this.setState({source: '', upperRooms: '', editing: false});
   }
@@ -233,4 +235,8 @@ class YForm extends React.Component {
   }
 }
 
-export default YForm;
+const mapStateToProps = state => ({
+  x: state.x,
+});
+
+export default connect(mapStateToProps)(YForm);

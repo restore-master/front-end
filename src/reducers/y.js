@@ -12,10 +12,10 @@ export default (state=initialState, action) => {
 
   case 'Y_CREATE':
     if(payload.name === '' || payload.cost == '') return new Error('submit a name and cost');
-    state[payload.xId] = state[payload.xId].concat([payload]);
+    // state[payload.xId] = state[payload.xId].concat([payload]);
     return {...state};
   case 'Y_UPDATE':
-    if(payload.name === '' || payload.cost == '') return new Error('submit a name and cost');
+    // if(payload.name === '' || payload.cost == '') return new Error('submit a name and cost');
     let xStateUpdate = state[payload.xId].map(
       y => y.id === payload.id ? payload : y);
     return {...state, [payload.xId]: xStateUpdate};
