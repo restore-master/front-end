@@ -1,33 +1,33 @@
 import superagent from 'superagent';
 
-export const xGet = xs => ({
-  type: 'X_GET',
-  payload: xs,
+export const customerGet = customers => ({
+  type: 'CUSTOMER_GET',
+  payload: customers,
 });
 
-const xPassIdAction = id => ({
-  type: 'X_ID_CREATE',
+const customerPassIdAction = id => ({
+  type: 'CUSTOMER_ID_CREATE',
   payload: id,
 });
 
-export const xGetAll = xs => dispatch => {
+export const customerGetAll = customers => dispatch => {
   console.log('apiurl:', __API_URL__);
   return superagent.get(`${__API_URL__}/customer`)
-    .send(xs)
+    .send(customers)
     .then(response => {
       // console.log(response.body[0].name);
       // console.log(response);
-      return dispatch(xGet(response.body));
+      return dispatch(customerGet(response.body));
     })
     .catch(console.error);
 };
 
-export const xCreate = x => dispatch => {
+export const customerCreate = customer => dispatch => {
   console.log('apiurl:', __API_URL__);
   return superagent.post(`${__API_URL__}/customer`)
-    .send(x)
+    .send(customer)
     .then(response => {
-      return dispatch(xPassIdAction(response.body));
+      return dispatch(customerPassIdAction(response.body));
       // console.log(response);
     })
     // .then(response => {
@@ -37,7 +37,7 @@ export const xCreate = x => dispatch => {
     // })
     .catch(console.error);
   // return {
-  //   type: 'X_CREATE',
+  //   type: 'CUSTOMER_CREATE',
   //   payload: x,
   // };
 };
@@ -56,17 +56,17 @@ export const xCreate = x => dispatch => {
 //     })
 // }
 
-export const xUpdate = x => ({
-  type: 'X_UPDATE',
-  payload: x,
+export const customerUpdate = customer => ({
+  type: 'CUSTOMER_UPDATE',
+  payload: customer,
 });
 
-export const xDelete = x => ({
-  type: 'X_DELETE',
-  payload: x,
+export const customerDelete = customer => ({
+  type: 'CUSTOMER_DELETE',
+  payload: customer,
 });
 
-export const xReset = () => ({type: 'X_RESET'});
+export const customerReset = () => ({type: 'CUSTOMER_RESET'});
 
 
 // export const xFetchRequest = () => dispatch => {

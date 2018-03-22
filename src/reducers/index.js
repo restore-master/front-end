@@ -1,8 +1,8 @@
-import y from './y';
-import x from './x';
+import report from './report';
+import customer from './customer';
 import {combineReducers} from 'redux';
 
 export default combineReducers({
-  x,
-  y,
+  customer,
+  report,
 });

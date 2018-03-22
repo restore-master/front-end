@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-class YForm extends React.Component {
+class ReportForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.y
-      ? this.props.y
+    this.state = this.props.report
+      ? this.props.report
       : {
         //Loss Details
         source: '',
@@ -60,7 +60,7 @@ class YForm extends React.Component {
 
   render() {
     return (
-      <form className='y-form' onSubmit={this.handleSubmit}>
+      <form className='report-form' onSubmit={this.handleSubmit}>
         <h1> Loss Details </h1>
         <input
           type='text'
@@ -236,7 +236,7 @@ class YForm extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  x: state.x,
+  customer: state.customer,
 });
 
-export default connect(mapStateToProps)(YForm);
+export default connect(mapStateToProps)(ReportForm);

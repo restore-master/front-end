@@ -1,10 +1,10 @@
 import React from 'react';
 
-class XForm extends React.Component {
+class CustomerForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.x
-      ? this.props.x
+    this.state = this.props.customer
+      ? this.props.customer
       : {
         name: '',
         date: '',
@@ -19,6 +19,8 @@ class XForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    console.log(this.props);
+    console.log(this.state);
     this.props.onComplete(this.state);
     console.log('customer object being sent on submit, to POST request', this.state);
 
@@ -30,7 +32,7 @@ class XForm extends React.Component {
 
   render() {
     return (
-      <form className='x-form' onSubmit={this.handleSubmit}>
+      <form className='customer-form' onSubmit={this.handleSubmit}>
         <input
           type='text'
           name='name'
@@ -53,4 +55,4 @@ class XForm extends React.Component {
   }
 }
 
-export default XForm;
+export default CustomerForm;
