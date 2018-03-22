@@ -1,14 +1,38 @@
 import React from 'react';
-import Doughnut from 'react-chartjs-2';
+import { Doughnut, Bar, Line, Pie  } from 'react-chartjs-2';
 
 export default class Chart extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      chartData: {
+        labels: [],
+        dataSets: [
+          {
+            label: '',
+            data : [
+
+            ],
+            backgroundColor: [
+
+            ],
+          },
+        ],
+      },
+    };
+  }
   render() { 
-    return ( 
-      <Doughnut data={chartData} options={chartOptions}/>     
+    return (
+      <div className="chart">
+        <Bar
+          data={this.state.chartData}
+          // width={100}
+          // height={50}
+          options={{
+            maintainAspectRatio: false,
+          }}
+        />
+      </div> 
     );
   }
 }
-//type of home
-//crawl or slab
-//how did you hear about us
-// flooring pipe
