@@ -4,26 +4,37 @@ import {renderIf} from '../../lib/utils';
 import CustomerItem from '../customer/customer-item/customer-item';
 import {customerGetAll, customerGet} from '../../actions/customer-actions';
 
+
 class Reports extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
+      customer: this.props.customer ? this.props.customer : {},
+      report: this.props.report ? this.props.report : {},
       view: false,
     };
     this.handleView = this.handleView.bind(this);
   };
 
+  componentWillMount(){
+    this.props.customerGetAll();
+  }
+
   handleView() {
     this.setState({view: !this.state.view});
-    console.log(this.props.customerGetAll());
+    console.log(this.props);
     console.log(this.state);
   };
 
   render(){
+    console.log('HELLO+++++========', this.state.customer);
     return(
       <div>
-        <button onClick={this.handleView}>View Forms</button>
         <h1>Water Loss Tracker</h1>
+        <button onClick={this.handleView}>View Forms</button>
+        {renderIf(this.state.view,
+          <h1>{console.log(this.props.customer)}</h1>
+        )}
         <p>checkout the dashboard page to create and view forms</p>
         <p>YOLO SWAGGINS</p>
       </div>
@@ -32,12 +43,13 @@ class Reports extends React.Component{
   }
 }
 
+
 const mapStateToProps = state => ({
-  customers: state.customer,
-  reports: state.report,
+  customer: state.customer,
+  report: state.report,
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch, getState) => ({
   customerGetAll: customer => dispatch(customerGetAll(customer)),
 });
 
