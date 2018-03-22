@@ -7,8 +7,6 @@ import {customerDelete} from '../../../actions/customer-actions';
 import ReportForm from '../../report/report-form/report-form';
 import {reportCreate} from '../../../actions/report-actions';
 import ReportItem from '../../report/report-item/report-item';
-import * as customerActions from '../../../actions/customer-actions';
-import * as reportActions from '../../../actions/report-actions';
 
 class CustomerItem extends React.Component {
   constructor(props) {
@@ -66,9 +64,9 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = (dispatch, getState) => ({
-  customerUpdate: customer => dispatch(customerActions.customerUpdate(customer)),
-  customerDelete: customer => dispatch(customerActions.customerDelete(customer)),
-  reportCreate: report => dispatch(reportActions.reportCreate(report)),
+  customerUpdate: customer => dispatch(customerUpdate(customer)),
+  customerDelete: customer => dispatch(customerDelete(customer)),
+  reportCreate: report => dispatch(reportCreate(report)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CustomerItem);

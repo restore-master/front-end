@@ -18,6 +18,7 @@ class Navbar extends React.Component {
               <React.Fragment>
                 <li><a href="/">Home</a></li>
                 <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/reports">Reports</a></li>
               </React.Fragment>
             )}
             {renderIf(this.props.token,

@@ -2,8 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {renderIf} from '../../../lib/utils';
 import ReportForm from '../report-form/report-form';
-import {yUpdate} from '../../../actions/report-actions';
-import {yDelete} from '../../../actions/report-actions';
+import {reportUpdate} from '../../../actions/report-actions';
+import {reportDelete} from '../../../actions/report-actions';
 
 
 class ReportItem extends React.Component {
