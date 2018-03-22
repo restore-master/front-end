@@ -8,7 +8,7 @@ class ReportForm extends React.Component {
       ? this.props.report
       : {
         //Loss Details
-        customer: this.props.xId,
+        // customer: this.props.customerId,
         source: '',
         upperRooms: '',
         lowerRooms: '',
@@ -39,7 +39,7 @@ class ReportForm extends React.Component {
         adjuster: '',
         customerAgent: '',
         //Id and editing
-        customer: this.props._id,
+        customer: this.props.customer[0]._id,
         editing: false,
       };
 

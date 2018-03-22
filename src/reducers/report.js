@@ -10,8 +10,11 @@ export default (state=initialState, action) => {
     delete changedState[payload.id];
     return changedState;
 
+  case 'REPORT_ID_CREATE':return [...state, payload];
+
   case 'REPORT_CREATE':
-    if(payload.name === '' || payload.cost == '') return new Error('submit a name and cost');
+
+    // if(payload.name === '' || payload.cost == '') return new Error('submit a name and cost');
     // state[payload.xId] = state[payload.xId].concat([payload]);
     return {...state};
   case 'REPORT_UPDATE':

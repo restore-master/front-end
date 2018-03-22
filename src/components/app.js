@@ -3,6 +3,7 @@ import {Provider} from 'react-redux';
 import createStore from '../lib/store';
 import Dashboard from './dashboard/dashboard';
 import Landing from './landing-page/landing.js';
+import Reports from './reports-page/reports.js';
 import Navbar from './navbar/navbar';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 
@@ -22,6 +23,7 @@ class App extends React.Component {
               <Navbar/>
               <Route exact path="/" component={Landing}/>
               <Route exact path="/dashboard" component={Dashboard}/>
+              <Route exact path="/reports" component={Reports}/>
             </React.Fragment>
           </BrowserRouter>
         </Provider>
