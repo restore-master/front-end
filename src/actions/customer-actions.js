@@ -5,22 +5,20 @@ export const customerGet = customers => ({
   payload: customers,
 });
 
+export const customerGetAll = customers => dispatch => {
+  console.log('apiurl:', __API_URL__);
+  return superagent.get(`${__API_URL__}/customer`)
+    .then(response => {
+      return dispatch(customerGet(response.body));
+    })
+    .catch(console.error);
+};
+
 const customerPassIdAction = id => ({
   type: 'CUSTOMER_ID_CREATE',
   payload: id,
 });
 
-export const customerGetAll = customers => dispatch => {
-  console.log('apiurl:', __API_URL__);
-  return superagent.get(`${__API_URL__}/customer`)
-    .send(customers)
-    .then(response => {
-      // console.log(response.body[0].name);
-      // console.log(response);
-      return dispatch(customerGet(response.body));
-    })
-    .catch(console.error);
-};
 
 export const customerCreate = customer => dispatch => {
   console.log('apiurl:', __API_URL__);
@@ -28,18 +26,8 @@ export const customerCreate = customer => dispatch => {
     .send(customer)
     .then(response => {
       return dispatch(customerPassIdAction(response.body));
-      // console.log(response);
     })
-    // .then(response => {
-    //   console.log('response.body', response.body);
-    //   console.log('response.body.id', response.body._id);
-    //   return response;
-    // })
     .catch(console.error);
-  // return {
-  //   type: 'CUSTOMER_CREATE',
-  //   payload: x,
-  // };
 };
 
 // export const signupRequest = user => dispatch => {
