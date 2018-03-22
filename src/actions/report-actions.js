@@ -1,11 +1,11 @@
 import superagent from 'superagent';
 
-export const yGet = report => ({
-  type: 'Y_GET',
+export const reportGet = report => ({
+  type: 'REPORT_GET',
   payload: report,
 });
 
-export const yCreate = report => {
+export const reportCreate = report => {
   console.log('report', report);
   console.log('apiurl:', __API_URL__);
   console.log('report.xID', report.customer);
@@ -13,7 +13,7 @@ export const yCreate = report => {
     .send({customer: report.customer, source: report.source})
     .catch(console.error);
   return {
-    type: 'Y_CREATE',
+    type: 'REPORT_CREATE',
     payload: report,
   };
 };
@@ -30,14 +30,14 @@ export const yCreate = report => {
 //     });
 // };
 
-export const yUpdate = report => ({
-  type: 'Y_UPDATE',
+export const reportUpdate = report => ({
+  type: 'REPORT_UPDATE',
   payload: report,
 });
 
-export const yDelete = report => ({
-  type: 'Y_DELETE',
+export const reportDelete = report => ({
+  type: 'REPORT_DELETE',
   payload: report,
 });
 
-export const yReset = () => ({type: 'Y_RESET'});
+export const reportReset = () => ({type: 'REPORT_RESET'});
