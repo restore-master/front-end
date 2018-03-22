@@ -5,17 +5,21 @@ export const reportGet = report => ({
   payload: report,
 });
 
-export const reportCreate = report => {
+const reportPassIdAction = id => ({
+  type: 'REPORT_ID_CREATE',
+  payload: id,
+});
+
+export const reportCreate = report => dispatch => {
   console.log('report', report);
   console.log('apiurl:', __API_URL__);
   console.log('report.xID', report.customer);
   superagent.post(`${__API_URL__}/report/${report.customer}`)
     .send({customer: report.customer, source: report.source})
+    .then(response  => {
+      return dispatch(reportPassIdAction(response.body));
+    })
     .catch(console.error);
-  return {
-    type: 'REPORT_CREATE',
-    payload: report,
-  };
 };
 
 // export const createActionRequest = (picture) => (dispatch) => {

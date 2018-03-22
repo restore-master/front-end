@@ -8,6 +8,7 @@ class CustomerForm extends React.Component {
       : {
         name: '',
         date: '',
+        reports: [],
       };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,6 +28,7 @@ class CustomerForm extends React.Component {
     this.setState({
       name: '',
       date: '',
+      report: [],
     });
   }
 
