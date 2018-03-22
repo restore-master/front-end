@@ -9,31 +9,38 @@ class Reports extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      customer: this.props.customer ? this.props.customer : {},
-      report: this.props.report ? this.props.report : {},
       view: false,
     };
-    this.handleView = this.handleView.bind(this);
+
+    this.handleClick = this.handleClick.bind(this);
   };
 
-  componentWillMount(){
-    this.props.customerGetAll();
+  handleClick() {
+    this.setState({
+      view: !this.state.view,
+    });
   }
 
-  handleView() {
-    this.setState({view: !this.state.view});
-    console.log(this.props);
-    console.log(this.state);
-  };
+  componentWillMount(){this.props.customerGetAll();};
+
 
   render(){
-    console.log('HELLO+++++========', this.state.customer);
+    console.log('HELLO+++++========', this.props.customer);
     return(
       <div>
         <h1>Water Loss Tracker</h1>
-        <button onClick={this.handleView}>View Forms</button>
-        {renderIf(this.state.view,
-          <h1>{console.log(this.props.customer)}</h1>
+        {renderIf(this.props.customer,
+          this.props.customer.map(customer =>
+            <div
+              onClick={this.handleClick}
+              className="customer-item"
+              key={customer._id}>
+              <h3>Name:{customer.name}, Date: {customer.date}</h3>
+              {renderIf(this.state.view,
+                <p>{customer.reports[0].source}</p>
+              )}
+
+            </div>)
         )}
         <p>checkout the dashboard page to create and view forms</p>
         <p>YOLO SWAGGINS</p>
