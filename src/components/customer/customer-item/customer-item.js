@@ -34,8 +34,8 @@ class CustomerItem extends React.Component {
       <div
         className='customer-item'
         key={this.props.customer.id}>
-        <p onDoubleClick={this.handleEditing}>Customer: {this.props.customer[0].name}</p>
-        <p onDoubleClick={this.handleEditing}>date: {this.props.customer[0].date}</p>
+        <h3 onDoubleClick={this.handleEditing}>Customer: {this.props.customer[0].name}</h3>
+        <h3 onDoubleClick={this.handleEditing}>Date: {this.props.customer[0].date}</h3>
         <button onClick={this.handleDelete}>delete</button>
         {renderIf(this.state.editing,
           <CustomerForm

@@ -20,25 +20,22 @@ class Dashboard extends React.Component {
 
   render() {
     return(
-      <section className='dashboard'>
-        <h1>Water Loss Tracker</h1>
+      <div className="dashboard-entry">
+        <section className='dashboard'>
+          <h1>Water Loss Tracker</h1>
 
-        <button onClick={this.handleCreate}>New Form</button>
-
-        {renderIf(this.state.create,
           <CustomerForm
             buttonText='create'
             onComplete={this.props.customerCreate}/>
 
-        )}
+          {renderIf(this.props.customers,
+            this.props.customers.map(x =>
+              <CustomerItem/>
+            )
+          )}
 
-        {renderIf(this.props.customers,
-          this.props.customers.map(x =>
-            <CustomerItem/>
-          )
-        )}
-
-      </section>
+        </section>
+      </div>
     );
   }
 }

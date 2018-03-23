@@ -34,25 +34,28 @@ class CustomerForm extends React.Component {
 
   render() {
     return (
-      <form className='search-form' onSubmit={this.handleSubmit}>
-        <input
-          type='text'
-          name='name'
-          value={this.state.name}
-          onChange={this.handleChange}
-          placeholder= "Customer's Name"
-        />
+      <div className="customer-form">
+        <form className='search-form' onSubmit={this.handleSubmit}>
+          <input
+            type='text'
+            name='name'
+            value={this.state.name}
+            onChange={this.handleChange}
+            placeholder= "Customer's Name"
+          />
 
-        <input
-          type='datetime-local'
-          name='date'
-          value={this.state.date}
-          onChange={this.handleChange}
-          placeholder= "Todays Date"
-        />
+          <input
+            className = 'dateInput'
+            type='date'
+            name='date'
+            value={this.state.date}
+            onChange={this.handleChange}
+            placeholder= "Todays Date"
+          />
 
-        <button type='submit'>{this.props.buttonText}</button>
-      </form>
+          <button type='submit'>{this.props.buttonText}</button>
+        </form>
+      </div>
     );
   }
 }
