@@ -8,7 +8,6 @@ class ReportForm extends React.Component {
       ? this.props.report
       : {
         //Loss Details
-        // customer: this.props.customerId,
         source: '',
         upperRooms: '',
         lowerRooms: '',
@@ -28,8 +27,8 @@ class ReportForm extends React.Component {
         setLockBox: '',
         petsOrChildren: '',
         specialNeeds: '',
-        RespiratoryOrAllergies: '',
-        Growth: '',
+        respiratoryOrAllergies: '',
+        growth: '',
         odor: '',
         monitors: '',
         // Address/survey/mailing

@@ -13,19 +13,19 @@ class Reports extends React.Component {
   };
 
   handleDoubleClick() {
-
-
-    this.setState({
-      view: !this.state.view,
-    });
+    if(this.props.customer.reports[0])
+      this.setState({
+        view: !this.state.view,
+      });
   }
 
   render() {
+    console.log(this.props.customer.reports);
     return (
       <div
         onDoubleClick={this.handleDoubleClick}>
         <h3>Name: {this.props.customer.name} / Date: {this.props.customer.date}</h3>
-        {renderIf(this.state.view,
+        {this.state.view ? renderIf(this.props.customer.reports[0],
           <div>
             <p>Source: {this.props.customer.reports[0].source}</p>
             <p>Upper-Rooms: {this.props.customer.reports[0].upperRooms}</p>
@@ -54,7 +54,7 @@ class Reports extends React.Component {
             <p>Customers Adjuster: {this.props.customer.reports[0].adjuster}</p>
             <p>Customers Agent: {this.props.customer.reports[0].customerAgent}</p>
           </div>
-        )}
+        ) : undefined}
       </div>
     );
   }
