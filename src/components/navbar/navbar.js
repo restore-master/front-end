@@ -14,19 +14,12 @@ class Navbar extends React.Component {
       <header>
         <nav>
           <ul>
-            {renderIf(!this.props.token,
-              <React.Fragment>
-                <li><a href="/">Home</a></li>
-                <li><a href="/dashboard">Dashboard</a></li>
-                <li><a href="/reports">Reports</a></li>
-              </React.Fragment>
-            )}
-            {renderIf(this.props.token,
-              <React.Fragment>
-                <li><a href="/dashboard">Dashboard</a></li>
-                <li onClick={() => this.props.store.dispatch({type: 'TOKEN_DELETE'})}><a href="/welcome/signin">Logout</a></li>
-              </React.Fragment>
-            )}
+            <React.Fragment>
+              <li><a href="/">Home</a></li>
+              <li><a href="/dashboard">Dashboard</a></li>
+              <li><a href="/reports">Reports</a></li>
+              <li><a href="/chart">Charts</a></li>
+            </React.Fragment>
           </ul>
         </nav>
       </header>

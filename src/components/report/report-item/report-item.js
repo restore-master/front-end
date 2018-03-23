@@ -38,7 +38,7 @@ class ReportItem extends React.Component {
         <p>Power/Heat: {this.props.report.powerHeat}</p>
         <p>Flooring Type: {this.props.report.flooringType}</p>
         <p>Type of Home: {this.props.report.typeOfHome}</p>
-        <p>Age of Home: {this.props.report.ageOfHome}</p>
+        <p>Age of Home: {this.props.report.yearBuilt}</p>
         <p>Standing Water: {this.props.report.standingWater + '"'}</p>
         <p>Foundation Type: {this.props.report.basement}</p>
         <p>Crawlspace or slab: {this.props.report.crawlOrSlab}</p>
@@ -49,7 +49,7 @@ class ReportItem extends React.Component {
         <p>Pets or Children: {this.props.report.petsOrChildren}</p>
         <p>Special Needs: {this.props.report.specialNeeds}</p>
         <p>Allergies: {this.props.report.respiratoryOrAllergies}</p>
-        <p>Growth: {this.props.report.growth}</p>
+        <p>growth: {this.props.report.growth}</p>
         <p>Odors: {this.props.report.odor}</p>
         <p>Monitors: {this.props.report.monitors}</p>
         <p>Email: {this.props.report.customerEmail}</p>

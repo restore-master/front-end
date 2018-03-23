@@ -1,49 +1,49 @@
-$form-border: 2px solid black;
-body {
-  background-color: gray;
-  color: white;
-  margin-left: 20%;
-  margin-right: 20%;
-}
+// $form-border: 2px solid black;
+// body {
+//   background-color: gray;
+//   color: white;
+//   margin-left: 20%;
+//   margin-right: 20%;
+// }
 
-h1 {
-  text-align: center;
-}
+// h1 {
+//   text-align: center;
+// }
 
-.x-form button,
-input {
-  border: $form-border;
-  margin-left: 5.5%;
-  margin-bottom: 2%;
-}
+// .x-form button,
+// input {
+//   border: $form-border;
+//   margin-left: 5.5%;
+//   margin-bottom: 2%;
+// }
 
-.x-item {
-  border: $form-border;
-  margin: 2% auto;
-  p {
-    display: inline-block;
-    margin-left: 5%;
-  }
-  button {
-    display: inline-block;
-    margin-left: 5.5%;
-    margin-bottom: 4%;
-    border: $form-border;
-  }
-  .x-form {
-    background-color: pink;
-    padding-top: 2.5vh;
-    border-top: $form-border;
-    border-bottom: $form-border;
-    margin-bottom: 4%;
-  }
-}
+// .x-item {
+//   border: $form-border;
+//   margin: 2% auto;
+//   p {
+//     display: inline-block;
+//     margin-left: 5%;
+//   }
+//   button {
+//     display: inline-block;
+//     margin-left: 5.5%;
+//     margin-bottom: 4%;
+//     border: $form-border;
+//   }
+//   .x-form {
+//     background-color: pink;
+//     padding-top: 2.5vh;
+//     border-top: $form-border;
+//     border-bottom: $form-border;
+//     margin-bottom: 4%;
+//   }
+// }
 
-.y-item {
-  background-color: #a5a5a5;
-  border-top: $form-border;
-}
+// .y-item {
+//   background-color: #a5a5a5;
+//   border-top: $form-border;
+// }
 
-.y-form {
-  margin-top: 0.5%;
-}
+// .y-form {
+//   margin-top: 0.5%;
+// }
