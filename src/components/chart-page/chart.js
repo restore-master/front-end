@@ -27,16 +27,21 @@ class Chart extends React.Component {
             0,
           ],
           backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(255, 206, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
+            'rgba(255, 99, 132, 0.7)',
+            'rgba(54, 162, 235, 0.7)',
+            'rgba(255, 206, 86, 0.7)',
+            'rgba(75, 192, 192, 0.7)',
+            'rgba(44, 3, 73, 0.7)',
+            'rgba(4, 239, 8, 0.7)',
+
           ],
           borderColor: [
             'rgba(255,99,132,1)',
             'rgba(54, 162, 235, 1)',
             'rgba(255, 206, 86, 1)',
             'rgba(75, 192, 192, 1)',
+            'rgba(44, 3, 73, 1)',
+            'rgba(4, 239, 8, 1)',
           ],
           borderWidth: 1,
         }],
@@ -65,16 +70,21 @@ class Chart extends React.Component {
             0,
           ],
           backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(255, 206, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
+            'rgba(255, 99, 132, 0.7)',
+            'rgba(54, 162, 235, 0.7)',
+            'rgba(255, 206, 86, 0.7)',
+            'rgba(75, 192, 192, 0.7)',
+            'rgba(44, 3, 73, 0.7)',
+            'rgba(4, 239, 8, 0.7)',
+
           ],
           borderColor: [
             'rgba(255,99,132,1)',
             'rgba(54, 162, 235, 1)',
             'rgba(255, 206, 86, 1)',
             'rgba(75, 192, 192, 1)',
+            'rgba(44, 3, 73, 1)',
+            'rgba(4, 239, 8, 1)',
           ],
           borderWidth: 1,
         }],
@@ -145,6 +155,8 @@ class Chart extends React.Component {
         Twitter ++;
       }else if (i === 'instagram') {
         Instagram ++;
+      }else if (i === 'snapchat') {
+        Snapchat ++;
       }else {
         Other2 ++;
       }
@@ -168,12 +180,17 @@ class Chart extends React.Component {
             'rgba(54, 162, 235, 0.7)',
             'rgba(255, 206, 86, 0.7)',
             'rgba(75, 192, 192, 0.7)',
+            'rgba(44, 3, 73, 0.7)',
+            'rgba(4, 239, 8, 0.7)',
+
           ],
           borderColor: [
             'rgba(255,99,132,1)',
             'rgba(54, 162, 235, 1)',
             'rgba(255, 206, 86, 1)',
             'rgba(75, 192, 192, 1)',
+            'rgba(44, 3, 73, 1)',
+            'rgba(4, 239, 8, 1)',
           ],
           borderWidth: 1,
         }],
@@ -206,12 +223,17 @@ class Chart extends React.Component {
             'rgba(54, 162, 235, 0.7)',
             'rgba(255, 206, 86, 0.7)',
             'rgba(75, 192, 192, 0.7)',
+            'rgba(44, 3, 73, 0.7)',
+            'rgba(4, 239, 8, 0.7)',
+
           ],
           borderColor: [
             'rgba(255,99,132,1)',
             'rgba(54, 162, 235, 1)',
             'rgba(255, 206, 86, 1)',
             'rgba(75, 192, 192, 1)',
+            'rgba(44, 3, 73, 1)',
+            'rgba(4, 239, 8, 1)',
           ],
           borderWidth: 1,
         }],
