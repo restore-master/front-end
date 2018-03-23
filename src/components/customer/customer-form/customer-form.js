@@ -37,6 +37,7 @@ class CustomerForm extends React.Component {
       <div className="customer-form">
         <form className='search-form' onSubmit={this.handleSubmit}>
           <input
+            className='customer-input'
             type='text'
             name='name'
             value={this.state.name}
@@ -45,7 +46,7 @@ class CustomerForm extends React.Component {
           />
 
           <input
-            className = 'dateInput'
+            className = 'dateInput customer-input'
             type='date'
             name='date'
             value={this.state.date}

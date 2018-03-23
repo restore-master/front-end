@@ -1,20 +1,23 @@
 body {
   background-color: white;
-  margin-left: 20%;
-  margin-right: 20%;
-  background: #ccc;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Trirong', serif;
+  // margin-left: 20%;
+  // margin-right: 20%;
+  background: white;
 }
 
 nav ul {
   list-style: none;
-  background-color: #444;
+  background-color:black;
   text-align: center;
   padding: 0;
   margin: 0;
   width: 100%;
 }
 nav li {
-  font-family: 'Oswald', sans-serif;
   font-size: 1.2em;
   line-height: 40px;
   height: 40px;
@@ -57,6 +60,10 @@ nav a.active {
   width: 65%;
 }
 
+.landing-item {
+  display: inline-block;
+}
+
 #landing img{
  display: block;
    margin-left: auto;
@@ -79,19 +86,12 @@ nav a.active {
 }
 
 .dashboard-entry {
+  height: 1000px;
   text-align: center;
   display: block;
     margin-left: auto;
     margin-right: auto;
 }
-// .dashboard {
-//   text-align: center;
-//   display: block;
-//     margin-left: auto;
-//     margin-right: auto;
-//     width: 30%;
-// }
-
 .dashboard input {
   margin: 10px;
 }
@@ -99,14 +99,6 @@ nav a.active {
 .dashboard select {
   width: 173px;
   margin: 10px;
-}
-//
-// .dashboard .report-form {
-//   display: inline;
-// }
-//
-.dashboard .dateInput {
-  margin-left: 50px;
 }
 
 .formFieldsWrapper {
@@ -124,7 +116,7 @@ nav a.active {
 }
 
 .report-tracker {
-width: 50%;
+width: 90%;
 margin-left: auto;
 margin-right: auto;
 }
@@ -137,7 +129,6 @@ color: white;
 }
 
 .report-tracker h1 , .report-tracker p{
-    text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -154,6 +145,77 @@ color: white;
 .landing-wrapper {
 margin-top: 50px;
 }
+.report-tracker {
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  background: lightgrey;
+}
+
+.container {
+  margin: auto;
+  padding: 10px;
+  background: darkgray;
+  color: white;
+}
+.one {
+  float: left;
+  margin-left: 10%; 
+}
+.two {
+  margin-left: 50%;
+}
+
+#report-container{
+  margin-bottom: 2%;
+}
+input {
+  display: inline;
+	font-style: normal;
+  font-variant: normal;
+  font-family: 'Trirong', serif;
+}
+
+
+button {
+  margin-top: 1%;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+  line-height: 26.4px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  color: darkred;
+  font-family: 'Trirong', serif;
+}
+button:hover {
+  background-color: grey; /* Green */
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  color: white;
+}
+
+h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  list-style: none;
+  background-color: black;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 60px;
+  border-bottom: 1px solid #888;
+  color: white;
+}
+
 @media screen and (min-width: 600px) {
   nav li {
     width: 120px;
@@ -163,25 +225,8 @@ margin-top: 50px;
     font-size: 1.4em;
   }
 
-  /* Option 1 - Display Inline */
   nav li {
     display: inline-block;
     margin-right: -4px;
   }
-
-
-  /* Options 2 - Float
-  navli {
-    float: left;
-  }
-  navul {
-    overflow: auto;
-    width: 600px;
-    margin: 0 auto;
-  }
-  .nav {
-    background-color: #444;
-  }
-  */
-
 }
