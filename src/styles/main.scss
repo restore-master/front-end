@@ -130,8 +130,13 @@ color: white;
 
 .report-tracker h1 , .report-tracker p{
     display: block;
+    margin-top: 0;
     margin-left: auto;
     margin-right: auto;
+}
+
+.report-tracker p{
+  color: #444;
 }
 
 .landing-dash, .landing-stats, .landing-report {
@@ -160,7 +165,7 @@ margin-top: 50px;
 }
 .one {
   float: left;
-  margin-left: 10%; 
+  margin-left: 10%;
 }
 .two {
   margin-left: 50%;
@@ -214,6 +219,12 @@ footer {
   height: 60px;
   border-bottom: 1px solid #888;
   color: white;
+}
+
+.chart-data{
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
 }
 
 @media screen and (min-width: 600px) {

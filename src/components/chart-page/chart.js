@@ -83,7 +83,10 @@ class Chart extends React.Component {
             yAxes: [{
               ticks: {
                 beginAtZero:true,
+                stepSize: 1,
+                min: 0,
               },
+              type: 'linear',
             }],
           },
         },
@@ -217,7 +220,10 @@ class Chart extends React.Component {
             yAxes: [{
               ticks: {
                 beginAtZero:true,
+                stepSize: 1,
+                min: 0,
               },
+              type: 'linear',
             }],
           },
         },
@@ -228,7 +234,9 @@ class Chart extends React.Component {
 
   render() {
     return (
-      <div onDoubleClick={this.handleDoubleClick}>
+      <div
+        className="chart-data"
+        onDoubleClick={this.handleDoubleClick}>
         <Bar
           data={this.state.chartData1}
           width={100}
