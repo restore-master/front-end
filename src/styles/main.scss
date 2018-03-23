@@ -135,13 +135,16 @@ nav a.active {
 
 .report-tracker h1 , .report-tracker p{
     display: block;
+    margin-top: 0;
     margin-left: auto;
     margin-right: auto;
 }
 
-.landing-dash,
-.landing-stats,
-.landing-report {
+.report-tracker p{
+  color: #444;
+}
+
+.landing-dash, .landing-stats, .landing-report {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -191,7 +194,7 @@ nav a.active {
 }
 .one {
   float: left;
-  margin-left: 10%; 
+  margin-left: 10%;
 }
 .two {
   margin-left: 50%;
@@ -247,6 +250,12 @@ footer {
   color: white;
 }
 
+.chart-data{
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
 @media screen and (min-width: 600px) {
   nav li {
     width: 120px;
@@ -255,10 +264,9 @@ footer {
     line-height: 50px;
     font-size: 1.4em;
   }
-  
+
   nav li {
     display: inline-block;
     margin-right: -4px;
   }
 }
-
