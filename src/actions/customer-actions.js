@@ -14,7 +14,7 @@ export const customerGetAll = customers => dispatch => {
     .catch(console.error);
 };
 
-const customerPassIdAction = id => ({
+export const customerPassIdAction = id => ({
   type: 'CUSTOMER_ID_CREATE',
   payload: id,
 });
