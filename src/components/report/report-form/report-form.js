@@ -37,9 +37,8 @@ class ReportForm extends React.Component {
         hearAboutUs: '',
         adjuster: '',
         customerAgent: '',
-        //Id and editing
+        //Id
         customer: this.props.customer[0]._id,
-        editing: false,
       };
 
     //handlers
@@ -55,7 +54,40 @@ class ReportForm extends React.Component {
     e.preventDefault();
     console.log('handleSubmit this.state', this.state);
     this.props.onComplete(this.state);
-    this.setState({source: '', upperRooms: '', editing: false});
+    this.setState({
+      //Loss Details
+      source: '',
+      upperRooms: '',
+      lowerRooms: '',
+      ceilingHeight: '',
+      ceilingDescription: '',
+      powerHeat: '',
+      flooringType: '',
+      typeOfHome: '',
+      yearBuilt: '',
+      standingWater: '',
+      basement: '',
+      crawlOrSlab: '',
+      crawlOrAtticAccessLocation: '',
+      contents: '',
+      // Considerations ie: allergies, authorization, etc
+      accessPermissions: '',
+      setLockBox: '',
+      petsOrChildren: '',
+      specialNeeds: '',
+      respiratoryOrAllergies: '',
+      growth: '',
+      odor: '',
+      monitors: '',
+      // Address/survey/mailing
+      lossIsMailingAddress: false,
+      customerEmail: '',
+      hearAboutUs: '',
+      adjuster: '',
+      customerAgent: '',
+      //Id
+      customer: this.props.customer[0]._id,
+    });
   }
 
   render() {

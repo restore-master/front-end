@@ -8,7 +8,7 @@
       },
       {
         "duration": 10,
-        "arrivalRate": 40
+        "arrivalRate": 35
       }
     ],
     "processor": "./load-test-create-customer.js"
