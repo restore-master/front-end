@@ -9,7 +9,6 @@ class Navbar extends React.Component {
   }
   render() {
     // console.log(this.action);
-
     return (
       <header>
         <nav className={'nav-bar'}>
@@ -21,12 +20,12 @@ class Navbar extends React.Component {
                 <li className={'nav-item'}><a href="/reports">Reports</a></li>
               </React.Fragment>
             )}
-            {renderIf(this.props.token,
+            {/* {renderIf(this.props.token,
               <React.Fragment>
                 <li><a href="/dashboard">Dashboard</a></li>
                 <li onClick={() => this.props.store.dispatch({type: 'TOKEN_DELETE'})}><a href="/welcome/signin">Logout</a></li>
               </React.Fragment>
-            )}
+            )} */}
           </ul>
         </nav>
       </header>
@@ -34,8 +33,4 @@ class Navbar extends React.Component {
   }
 }
 
-let mapDispatchToProps = dispatch => ({
-  tokenDelete: () => dispatch(tokenDelete),
-});
-
-export default connect (mapDispatchToProps)(Navbar);
+export default Navbar;
