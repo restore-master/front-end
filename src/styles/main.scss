@@ -2,8 +2,6 @@ body {
   margin: 0;
   padding: 0;
   background: #ccc;
-  margin-left: 12%;
-  margin-right: 12%;
 }
 
 nav ul {
@@ -12,6 +10,7 @@ nav ul {
   text-align: center;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 nav li {
   font-family: 'Oswald', sans-serif;
@@ -38,23 +37,29 @@ nav a.active {
   cursor: default;
 }
 
-main {
-  background-color: #dddbdb
-}
-
 #landing {
+  background-color: #dddbdb;
   height: 1000px;
+  margin-left: 12%;
+  margin-right: 12%;
 }
 
-#landing h1, p {
+#landing h1{
+  padding-top: 30px;
+  margin-top: 0;
   text-align: center;
 }
 
-#landing img {
+.landing-dash img, .landing-stats img, .landing-report img{
+  margin-left: 0;
+  margin-right: 0;
+  width: 65%;
+}
+
+#landing img{
  display: block;
    margin-left: auto;
    margin-right: auto;
-   width: 30%;
 }
 
 .customer-form {
@@ -117,11 +122,36 @@ main {
   width: 100%;
 }
 
+.report-tracker {
+width: 50%;
+margin-left: auto;
+margin-right: auto;
+}
+
+.report-tracker h3 {
+padding-left: 5%;
+width: 40%;
+background-color: #444;
+color: white;
+}
+
 .report-tracker h1 , .report-tracker p{
     text-align: center;
     display: block;
-      margin-left: auto;
-      margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.landing-dash, .landing-stats, .landing-report {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: inline-block;
+  width: 33%;
+}
+
+.landing-wrapper {
+margin-top: 50px;
 }
 @media screen and (min-width: 600px) {
   nav li {
