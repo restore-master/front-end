@@ -19,6 +19,7 @@ let plugins = [
   }),
 ];
 
+
 if(production === true) {
   plugins = plugins.concat([
     new CleanPlugin(),
