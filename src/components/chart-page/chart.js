@@ -11,7 +11,7 @@ import { Bar } from 'react-chartjs-2';
 class Chart extends React.Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
       chartData: {
         labels: ['Laminate', 'Hardwoods', 'Carpet', 'Other'],
@@ -50,7 +50,7 @@ class Chart extends React.Component {
     };
     this.handleDoubleClick = this.handleDoubleClick.bind(this);
   }
-  
+
   componentWillMount() {
     this.props.customerGetAll();
     this.props.reportGetAll();
@@ -110,11 +110,11 @@ class Chart extends React.Component {
         },
       },
     });
-      
+
   }
-  
-  render() { 
-    return ( 
+
+  render() {
+    return (
       <div onDoubleClick={this.handleDoubleClick}>
         <Bar
           data={this.state.chartData}
@@ -127,7 +127,7 @@ class Chart extends React.Component {
     );
   }
 }
- 
+
 const mapStateToProps = state => ({
   customer: state.customer,
   report: state.report,

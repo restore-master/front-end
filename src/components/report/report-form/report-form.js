@@ -28,8 +28,8 @@ class ReportForm extends React.Component {
         setLockBox: '',
         petsOrChildren: '',
         specialNeeds: '',
-        RespiratoryOrAllergies: '',
-        Growth: '',
+        respiratoryOrAllergies: '',
+        growth: '',
         odor: '',
         monitors: '',
         // Address/survey/mailing
@@ -56,7 +56,37 @@ class ReportForm extends React.Component {
     e.preventDefault();
     console.log('handleSubmit this.state', this.state);
     this.props.onComplete(this.state);
-    this.setState({source: '', upperRooms: '', editing: false});
+    this.setState({
+      source: '',
+      upperRooms: '',
+      source: '',
+      upperRooms: '',
+      lowerRooms: '',
+      ceilingHeight: '',
+      ceilingDescription: '',
+      powerHeat: '',
+      flooringType: '',
+      typeOfHome: '',
+      yearBuilt: '',
+      standingWater: '',
+      basement: '',
+      crawlOrSlab: '',
+      crawlOrAtticAccessLocation: '',
+      contents: '',
+      accessPermissions: '',
+      setLockBox: '',
+      petsOrChildren: '',
+      specialNeeds: '',
+      respiratoryOrAllergies: '',
+      growth: '',
+      odor: '',
+      monitors: '',
+      lossIsMailingAddress: false,
+      customerEmail: '',
+      hearAboutUs: '',
+      adjuster: '',
+      customerAgent: '',
+      editing: false});
   }
 
   render() {
