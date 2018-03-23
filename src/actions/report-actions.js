@@ -21,8 +21,38 @@ const reportPassIdAction = id => ({
 
 export const reportCreate = report => dispatch => {
   console.log('apiurl:', __API_URL__);
+  console.log('REPORT+++ ', report);
   superagent.post(`${__API_URL__}/report/${report.customer}`)
-    .send({customer: report.customer, source: report.source})
+    .send({
+      customer: report.customer,
+      source: report.source,
+      upperRooms: report.upperRooms,
+      lowerRooms: report.lowerRooms,
+      ceilingHeight: report.ceilingHeight,
+      ceilingDescription: report.ceilingDescription,
+      powerHeat: report.powerHeat,
+      flooringType: report.flooringType,
+      typeOfHome: report.typeOfHome,
+      ageOfHome: report.ageOfHome,
+      standingWater: report.standingWater,
+      basement: report.basement,
+      crawlOrSlab: report.crawlOrSlab,
+      crawlOrAtticAccessLocation: report.crawlOrAtticAccessLocation,
+      contents: report.contents,
+      accessPermissions: report.accessPermissions,
+      setLockBox: report.setLockBox,
+      petsOrChildren: report.petsOrChildren,
+      specialNeeds: report.specialNeeds,
+      respiratoryOrAllergies: report.respiratoryOrAllergies,
+      growth: report.growth,
+      odor: report.odor,
+      monitors: report.monitors,
+      lossIsMailingAddress: report.lossIsMailingAddress,
+      customerEmail: report.customerEmail,
+      hearAboutUs: report.hearAboutUs,
+      adjuster: report.adjuster,
+      customerAgent: report.customerAgent,
+    })
     .then(response  => {
       return dispatch(reportPassIdAction(response.body));
     })
