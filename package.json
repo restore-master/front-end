@@ -68,5 +68,9 @@
     "uuid": "^3.2.1",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1"
+  },
+  "dependencies": {
+    "chart.js": "^2.7.2",
+    "react-chartjs-2": "^2.7.0"
   }
 }

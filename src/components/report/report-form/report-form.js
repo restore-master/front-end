@@ -17,7 +17,7 @@ class ReportForm extends React.Component {
         powerHeat: '',
         flooringType: '',
         typeOfHome: '',
-        ageofHome: '',
+        yearBuilt: '',
         standingWater: '',
         basement: '',
         crawlOrSlab: '',
@@ -113,8 +113,8 @@ class ReportForm extends React.Component {
           placeholder="Type of Home"/>
         <input
           type='text'
-          name='ageofHome'
-          value={this.state.ageofHome}
+          name='yearBuilt'
+          value={this.state.yearBuilt}
           onChange={this.handleChange}
           placeholder="Age of Home"/>
         <input
@@ -175,16 +175,16 @@ class ReportForm extends React.Component {
           placeholder='Any Special Needs?'/>
         <input
           type='text'
-          name='RespiratoryOrAllergies'
-          value={this.state.RespiratoryOrAllergies}
+          name='respiratoryOrAllergies'
+          value={this.state.respiratoryOrAllergies}
           onChange={this.handleChange}
           placeholder='Any Respiratory Problems or Allergies?'/>
         <input
           type='text'
-          name='Growth'
-          value={this.state.Growth}
+          name='growth'
+          value={this.state.growth}
           onChange={this.handleChange}
-          placeholder='Any Mold Growth?'/>
+          placeholder='Any Mold growth?'/>
         <input
           type='text'
           name='odor'
