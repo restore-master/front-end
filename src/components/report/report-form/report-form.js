@@ -58,6 +58,8 @@ class ReportForm extends React.Component {
       //Loss Details
       source: '',
       upperRooms: '',
+      source: '',
+      upperRooms: '',
       lowerRooms: '',
       ceilingHeight: '',
       ceilingDescription: '',
@@ -274,19 +276,7 @@ class ReportForm extends React.Component {
     );
   }
 }
-// <input
-//   type='text'
-//   name='flooringType'
-//   value={this.state.flooringType}
-//   onChange={this.handleChange}
-//   placeholder="flooring Type"/>
 
-// <select name="flooringType" form="report">
-//   <option value="laminate">Laminate</option>
-//   <option value="wood">Wood</option>
-//   <option value="carpet">Carpet</option>
-//   <option value="other">Other</option>
-// </select>
 const mapStateToProps = state => ({
   customer: state.customer,
 });

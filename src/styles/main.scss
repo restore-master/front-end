@@ -11,7 +11,7 @@ body {
 
 nav ul {
   list-style: none;
-  background-color: black;
+  background-color:black;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -67,10 +67,10 @@ nav a.active {
   display: inline-block;
 }
 
-#landing img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+#landing img{
+ display: block;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .customer-form {
@@ -132,11 +132,11 @@ nav a.active {
   color: white;
 }
 
-.report-tracker h1,
-.report-tracker p {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+
+.report-tracker h1 , .report-tracker p{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .landing-dash,
@@ -176,40 +176,57 @@ nav a.active {
   margin-left: 50%;
 }
 
-#report-container {
-  margin-bottom: 2%;
+.report-tracker {
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  background: lightgrey;
 }
 
+.container {
+  margin: auto;
+  padding: 10px;
+  background: darkgray;
+  color: white;
+}
+.one {
+  float: left;
+  margin-left: 10%; 
+}
+.two {
+  margin-left: 50%;
+}
+
+#report-container{
+  margin-bottom: 2%;
+}
 input {
   display: inline;
-  font-style: normal;
+	font-style: normal;
   font-variant: normal;
   font-family: 'Trirong', serif;
 }
 
 button {
   margin-top: 1%;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 500;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
   line-height: 26.4px;
   text-align: center;
-  -webkit-transition-duration: 0.4s;
-  /* Safari */
+  -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   color: darkred;
   font-family: 'Trirong', serif;
 }
 
 button:hover {
-  background-color: grey;
-  /* Green */
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  background-color: grey; /* Green */
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   color: white;
 }
 
-h3,
-p {
+h3, p {
   margin: 0;
   padding: 0;
 }
@@ -238,8 +255,10 @@ footer {
     line-height: 50px;
     font-size: 1.4em;
   }
+  
   nav li {
     display: inline-block;
     margin-right: -4px;
   }
 }
+
