@@ -1,7 +1,7 @@
 $form-border: 2px solid black;
 body {
-  background-color: gray;
-  color: white;
+  background-color: white;
+  color: black;
   margin-left: 20%;
   margin-right: 20%;
 }
@@ -10,14 +10,14 @@ h1 {
   text-align: center;
 }
 
-.x-form button,
+.customer-form button,
 input {
   border: $form-border;
   margin-left: 5.5%;
   margin-bottom: 2%;
 }
 
-.x-item {
+.customer-item {
   border: $form-border;
   margin: 2% auto;
   p {
@@ -30,7 +30,7 @@ input {
     margin-bottom: 4%;
     border: $form-border;
   }
-  .x-form {
+  .customer-form {
     background-color: pink;
     padding-top: 2.5vh;
     border-top: $form-border;
@@ -39,11 +39,20 @@ input {
   }
 }
 
-.y-item {
+.report-item {
   background-color: #a5a5a5;
   border-top: $form-border;
 }
 
-.y-form {
+.report-form {
   margin-top: 0.5%;
+}
+
+.nav-bar {
+  width: 100%;
+}
+
+.nav-item {
+  display: inline-block;
+  margin-left: 5%;
 }
