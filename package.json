@@ -7,10 +7,27 @@
     "start": "node index.js",
     "build": "webpack",
     "lint": "eslint .",
-    "test": "jest",
+    "test": "jest -i",
     "test:watch": "jest --watchAll",
     "watch": "webpack-dev-server --inline --hot",
     "heroku-postbuild": "webpack -p --progress"
+  },
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageDirectory": "./coverage",
+    "coveragePathIgnorePatterns": [
+      "/__test__/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 70,
+        "functions": 70,
+        "lines": 70,
+        "statements": 70
+      }
+    }
   },
   "engines": {
     "node": "8.9.4"
