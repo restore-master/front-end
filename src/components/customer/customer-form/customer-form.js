@@ -34,7 +34,7 @@ class CustomerForm extends React.Component {
 
   render() {
     return (
-      <form className='customer-form' onSubmit={this.handleSubmit}>
+      <form className='search-form' onSubmit={this.handleSubmit}>
         <input
           type='text'
           name='name'

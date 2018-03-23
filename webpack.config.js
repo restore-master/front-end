@@ -19,7 +19,7 @@ let plugins = [
   }),
 ];
 
-if(production) {
+if(production === true) {
   plugins = plugins.concat([
     new CleanPlugin(),
     new UglifyPlugin(),
