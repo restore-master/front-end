@@ -14,8 +14,8 @@ describe('<Navbar />', function() {
     it('should render a navbar into dom', () => {
       expect(this.wrapper.find('.nav-bar').length).toEqual(1);
     });
-    it('should render two category items into the dom', () => {
-      expect(this.wrapper.find('.nav-bar li').length).toEqual(3);
+    it('should render 4 nav items into the dom', () => {
+      expect(this.wrapper.find('.nav-bar li').length).toEqual(4);
     });
   });
 });

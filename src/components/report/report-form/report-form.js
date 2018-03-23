@@ -8,7 +8,6 @@ class ReportForm extends React.Component {
       ? this.props.report
       : {
         //Loss Details
-        // customer: this.props.customerId,
         source: '',
         upperRooms: '',
         lowerRooms: '',
@@ -38,9 +37,8 @@ class ReportForm extends React.Component {
         hearAboutUs: '',
         adjuster: '',
         customerAgent: '',
-        //Id and editing
+        //Id
         customer: this.props.customer[0]._id,
-        editing: false,
       };
 
     //handlers
@@ -57,6 +55,7 @@ class ReportForm extends React.Component {
     console.log('handleSubmit this.state', this.state);
     this.props.onComplete(this.state);
     this.setState({
+      //Loss Details
       source: '',
       upperRooms: '',
       source: '',
@@ -73,6 +72,7 @@ class ReportForm extends React.Component {
       crawlOrSlab: '',
       crawlOrAtticAccessLocation: '',
       contents: '',
+      // Considerations ie: allergies, authorization, etc
       accessPermissions: '',
       setLockBox: '',
       petsOrChildren: '',
@@ -81,12 +81,15 @@ class ReportForm extends React.Component {
       growth: '',
       odor: '',
       monitors: '',
+      // Address/survey/mailing
       lossIsMailingAddress: false,
       customerEmail: '',
       hearAboutUs: '',
       adjuster: '',
       customerAgent: '',
-      editing: false});
+      //Id
+      customer: this.props.customer[0]._id,
+    });
   }
 
   render() {
@@ -273,19 +276,7 @@ class ReportForm extends React.Component {
     );
   }
 }
-// <input
-//   type='text'
-//   name='flooringType'
-//   value={this.state.flooringType}
-//   onChange={this.handleChange}
-//   placeholder="flooring Type"/>
 
-// <select name="flooringType" form="report">
-//   <option value="laminate">Laminate</option>
-//   <option value="wood">Wood</option>
-//   <option value="carpet">Carpet</option>
-//   <option value="other">Other</option>
-// </select>
 const mapStateToProps = state => ({
   customer: state.customer,
 });
