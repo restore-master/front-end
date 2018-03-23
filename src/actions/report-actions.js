@@ -6,7 +6,7 @@ export const reportGet = report => ({
 });
 
 export const reportGetAll = reports => dispatch => {
-  console.log('apiurl:', __API_URL__);
+  console.log('api-url:', __API_URL__);
   return superagent.get(`${__API_URL__}/report`)
     .then(response => {
       return dispatch(reportGet(response.body));
@@ -33,7 +33,7 @@ export const reportCreate = report => dispatch => {
       powerHeat: report.powerHeat,
       flooringType: report.flooringType,
       typeOfHome: report.typeOfHome,
-      ageOfHome: report.ageOfHome,
+      yearBuilt: report.yearBuilt,
       standingWater: report.standingWater,
       basement: report.basement,
       crawlOrSlab: report.crawlOrSlab,
