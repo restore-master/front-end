@@ -12,12 +12,11 @@ describe('<Dashboard />', function() {
   describe('#shallow mounting', function() {
     beforeAll(() => {
       let wrapper = shallow(<Provider store={createStore()}><Dashboard /></Provider>);
-      wrapper.setProps({customer: [
-        {_id: '1234', name: 'yooo'},
-        {_id: '5678', name: 'gruu'}]});
       this.wrapper = wrapper;
     });
     afterAll(() => this.wrapper.unmount());
+
+    console.log(this.wrapper);
     it('should render two category items into the dom', () => {
       expect(this.wrapper.find('.dashboard').length).toEqual(0);
     });

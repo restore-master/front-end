@@ -1,0 +1,24 @@
+config:
+  target: 'http://localhost:3000'
+  phases:
+    - duration: 5 #how many seconds
+      arrivalRate: 20 #hits per second
+    - duration: 10 #how many seconds
+      arrivalRate: 50 #hits per second
+  processor: './load-test-create-customer.js'
+scenarios:
+  - name: "create customer"
+    flow:
+    - function: 'create'
+    - post:
+      url: "/customer"
+      json:
+        name: "{{ name }}"
+        date: "{{ date }}"
+      capture:
+        json: "$response"
+        as: "response"
+    - log: "created a customer on /customer"
+    # - get:
+    #     url: "/customer"
+    - log: "sent a get request to /customer"

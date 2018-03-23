@@ -2,8 +2,6 @@ import React from 'react';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import Navbar from '../components/navbar/navbar';
-// import { Provider } from 'react-redux';
-// import createStore from '../lib/store';
 require('jest');
 
 configure({adapter: new Adapter()});

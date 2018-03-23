@@ -1,0 +1,40 @@
+{
+  "config": {
+    "target": "http://localhost:3000",
+    "phases": [
+      {
+        "duration": 5,
+        "arrivalRate": 20
+      },
+      {
+        "duration": 10,
+        "arrivalRate": 40
+      }
+    ],
+    "processor": "./load-test-create-customer.js"
+  },
+  "scenarios": [
+    {
+      "name": "create customers",
+      "flow": [
+        {
+          "function": "create"
+        },
+        {
+          "post": {
+            "url": "/customer",
+            "json": {
+              "name": "{{ name }}",
+              "date": " {{ date }}"
+            }
+          }
+        },
+        {
+          "get": {
+            "url": "/customer"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -36,6 +36,7 @@
   "author": "",
   "license": "",
   "devDependencies": {
+    "artillery": "^1.6.0-14",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
@@ -49,6 +50,7 @@
     "eslint": "^4.18.1",
     "eslint-plugin-react": "^7.7.0",
     "extract-text-webpack-plugin": "^3.0.2",
+    "faker": "^4.1.0",
     "file-loader": "^1.1.9",
     "html-webpack-plugin": "^2.30.1",
     "jest": "^22.4.2",
