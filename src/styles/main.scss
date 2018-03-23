@@ -11,6 +11,7 @@ nav ul {
   text-align: center;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 nav li {
   font-family: 'Oswald', sans-serif;
@@ -28,7 +29,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #005f5f;
+  background-color: #d1cfcf;
 }
 
 nav a.active {
@@ -37,6 +38,122 @@ nav a.active {
   cursor: default;
 }
 
+#landing {
+  background-color: #dddbdb;
+  height: 1000px;
+  margin-left: 12%;
+  margin-right: 12%;
+}
+
+#landing h1{
+  padding-top: 30px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.landing-dash img, .landing-stats img, .landing-report img{
+  margin-left: 0;
+  margin-right: 0;
+  width: 65%;
+}
+
+#landing img{
+ display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.customer-form {
+  text-align: center;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-form {
+  text-align: center;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+  width: 30%;
+}
+
+.dashboard-entry {
+  text-align: center;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+// .dashboard {
+//   text-align: center;
+//   display: block;
+//     margin-left: auto;
+//     margin-right: auto;
+//     width: 30%;
+// }
+
+.dashboard input {
+  margin: 10px;
+}
+
+.dashboard select {
+  width: 173px;
+  margin: 10px;
+}
+//
+// .dashboard .report-form {
+//   display: inline;
+// }
+//
+.dashboard .dateInput {
+  margin-left: 50px;
+}
+
+.formFieldsWrapper {
+  height: 750px;
+}
+
+.dashboard .formFields {
+  display: inline-table;
+  width: 30%;
+  height: 740px;
+}
+
+.customer-item {
+  width: 100%;
+}
+
+.report-tracker {
+width: 50%;
+margin-left: auto;
+margin-right: auto;
+}
+
+.report-tracker h3 {
+padding-left: 5%;
+width: 40%;
+background-color: #444;
+color: white;
+}
+
+.report-tracker h1 , .report-tracker p{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.landing-dash, .landing-stats, .landing-report {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: inline-block;
+  width: 33%;
+}
+
+.landing-wrapper {
+margin-top: 50px;
+}
 @media screen and (min-width: 600px) {
   nav li {
     width: 120px;
@@ -45,13 +162,14 @@ nav a.active {
     line-height: 50px;
     font-size: 1.4em;
   }
-  
+
   /* Option 1 - Display Inline */
   nav li {
     display: inline-block;
     margin-right: -4px;
   }
-  
+
+
   /* Options 2 - Float
   navli {
     float: left;
@@ -65,7 +183,5 @@ nav a.active {
     background-color: #444;
   }
   */
-                            #landing h1, p {
-                              text-align: center;
-                            }
+
 }

@@ -4,19 +4,24 @@ import {renderIf} from '../../lib/utils';
 import CustomerItem from '../customer/customer-item/customer-item';
 import CustomerReportItem from './customer-report-item/customer-report-item';
 import {customerGetAll, customerGet} from '../../actions/customer-actions';
+
 import {reportGetAll, reportGet} from '../../actions/report-actions';
 
 class Reports extends React.Component{
+
   componentWillMount() {
     this.props.customerGetAll();
     this.props.reportGetAll();
   };
 
   render(){
-    console.log('HELLO+++++========', this.props.customer);
+    console.log('HELLO+++++========', this.props);
     return(
-      <div>
+      <div className="report-tracker">
         <h1>Water Loss Tracker</h1>
+        <p>Double Click the report for more details!</p>
+
+
         {renderIf(this.props.customer,
           this.props.customer.map(customer =>
             <CustomerReportItem
@@ -24,8 +29,6 @@ class Reports extends React.Component{
               customer={customer}
               key={customer._id}/>)
         )}
-        <p>checkout the dashboard page to create and view forms</p>
-        <p>YOLO SWAGGINS</p>
       </div>
     );
   }

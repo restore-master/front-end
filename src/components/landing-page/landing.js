@@ -3,11 +3,25 @@ import React from 'react';
 class Landing extends React.Component{
   render(){
     return(
-      <div id="landing"> 
-        <h1>Water Loss Tracker</h1>
-        <img src={`${__dirname}/whiteboard-challenge-37.jpeg`} height="500" weight="500"/>
-        <p>checkout the dashboard page to create and view forms</p>
-        <p>checkout the statistics page to view your form data</p>
+      <div id="landing">
+        <h1>Water Loss Reporter</h1>
+
+        <img src={require(`${__dirname}/logo.png`)} height="250" width="250"/>
+        <div className="landing-wrapper">
+          <div className="landing-report">
+            <h1>View Forms</h1>
+            <a href="reports"><img src={require(`${__dirname}/openbook.png`)} height="250" width="250"/></a>
+          </div>
+          <div className="landing-dash">
+            <h1>Create Forms</h1>
+            <a href="dashboard"><img src={require(`${__dirname}/penandpaper.png`)} height="250" width="250"/></a>
+          </div>
+          <div className="landing-stats">
+            <h1>View Statistics</h1>
+            <a href="chart"><img src={require(`${__dirname}/stats.png`)} height="250" width="250"/></a>
+          </div>
+        </div>
+
       </div>
     );
 
