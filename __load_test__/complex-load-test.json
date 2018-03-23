@@ -1,6 +1,6 @@
 {
   "config": {
-    "target": "https://rm-back-end-staging.herokuapp.com/",
+    "target": "https://rm-back-end-staging.herokuapp.com",
     "phases": [
       {
         "duration": 5,
