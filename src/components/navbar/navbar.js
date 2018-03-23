@@ -9,10 +9,9 @@ class Navbar extends React.Component {
   }
   render() {
     // console.log(this.action);
-
     return (
       <header>
-        <nav>
+        <nav className={'nav-bar'}>
           <ul>
             <React.Fragment>
               <li><a href="/">Home</a></li>
@@ -27,8 +26,4 @@ class Navbar extends React.Component {
   }
 }
 
-let mapDispatchToProps = dispatch => ({
-  tokenDelete: () => dispatch(tokenDelete),
-});
-
-export default connect (mapDispatchToProps)(Navbar);
+export default Navbar;

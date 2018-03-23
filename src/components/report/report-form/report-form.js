@@ -240,4 +240,8 @@ const mapStateToProps = state => ({
   customer: state.customer,
 });
 
-export default connect(mapStateToProps)(ReportForm);
+const mapDispatchToProps = (dispatch, getState) => ({
+  expenseCreate: expense => dispatch(expenseCreate(expense)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ReportForm);

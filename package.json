@@ -7,10 +7,27 @@
     "start": "node index.js",
     "build": "webpack",
     "lint": "eslint .",
-    "test": "jest",
+    "test": "jest -i",
     "test:watch": "jest --watchAll",
     "watch": "webpack-dev-server --inline --hot",
     "heroku-postbuild": "webpack -p --progress"
+  },
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageDirectory": "./coverage",
+    "coveragePathIgnorePatterns": [
+      "/__test__/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 70,
+        "functions": 70,
+        "lines": 70,
+        "statements": 70
+      }
+    }
   },
   "engines": {
     "node": "8.9.4"
@@ -19,6 +36,7 @@
   "author": "",
   "license": "",
   "devDependencies": {
+    "artillery": "^1.6.0-14",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
@@ -32,9 +50,11 @@
     "eslint": "^4.18.1",
     "eslint-plugin-react": "^7.7.0",
     "extract-text-webpack-plugin": "^3.0.2",
+    "faker": "^4.1.0",
     "file-loader": "^1.1.9",
     "html-webpack-plugin": "^2.30.1",
     "jest": "^22.4.2",
+    "jsdom": "^11.6.2",
     "node-sass": "^4.7.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

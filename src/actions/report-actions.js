@@ -14,7 +14,7 @@ export const reportGetAll = reports => dispatch => {
     .catch(console.error);
 };
 
-const reportPassIdAction = id => ({
+export const reportPassIdAction = id => ({
   type: 'REPORT_ID_CREATE',
   payload: id,
 });
