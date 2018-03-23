@@ -1,6 +1,6 @@
 'use strict';
 
-require('dotenv').config({path: `${__dirname}/.dev.env`});
+require('dotenv').config();
 let production = process.env.NODE_ENV === 'production';
 
 const HtmlPlugin = require('html-webpack-plugin');
@@ -10,15 +10,17 @@ const UglifyPlugin = require('uglifyjs-webpack-plugin');
 const {DefinePlugin, EnvironmentPlugin} = require('webpack');
 
 let plugins = [
-  new HtmlPlugin({ template: `${__dirname}/src/index.html` }),
+  new HtmlPlugin({template: `${__dirname}/src/index.html`}),
   new ExtractTextPlugin('bundle-[hash].css'),
   new EnvironmentPlugin(['NODE_ENV']),
   new DefinePlugin({
     __DEBUG__: JSON.stringify(!production),
+    __API_URL__: JSON.stringify(process.env.API_URL),
   }),
 ];
 
-if(production) {
+
+if(production === true) {
   plugins = plugins.concat([
     new CleanPlugin(),
     new UglifyPlugin(),

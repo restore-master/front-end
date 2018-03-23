@@ -1,40 +1,52 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {xCreate} from '../../actions/x-actions';
-import XForm from '../x/x-form/x-form';
-import XItem from '../x/x-item/x-item';
+import {customerCreate} from '../../actions/customer-actions';
+import {renderIf} from '../../lib/utils';
+import CustomerForm from '../customer/customer-form/customer-form';
+import CustomerItem from '../customer/customer-item/customer-item';
 
 class Dashboard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      create: false,
+    };
+    this.handleCreate = this.handleCreate.bind(this);
+  };
+
+  handleCreate() {
+    this.setState({create: !this.state.create});
+  };
+
   render() {
     return(
-      <section className='dashboard'>
-        <h1>y tracker</h1>
+      <div className="dashboard-entry">
+        <section className='dashboard'>
+          <h1>Water Loss Tracker</h1>
 
-        <XForm
-          buttonText='create'
-          onComplete={this.props.xCreate}/>
+          <CustomerForm
+            buttonText='create'
+            onComplete={this.props.customerCreate}/>
 
-        {this.props.categories ?
-          this.props.categories.map(x =>
-            <XItem
-              x={x}
-              key={x.id}/>
-          )
-          :
-          undefined
-        }
-      </section>
+          {renderIf(this.props.customers,
+            this.props.customers.map(x =>
+              <CustomerItem/>
+            )
+          )}
+
+        </section>
+      </div>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  categories: state.categories,
-  ys: state.ys,
+  customers: state.customer,
+  reports: state.report,
 });
 
-const mapDispatchToProps = (dispatch, getState) => ({
-  xCreate: x => dispatch(xCreate(x)),
+const mapDispatchToProps = (dispatch) => ({
+  customerCreate: customer => dispatch(customerCreate(customer)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
