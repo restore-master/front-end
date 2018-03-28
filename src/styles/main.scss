@@ -1,0 +1,272 @@
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Trirong', serif;
+  // margin-left: 20%;
+  // margin-right: 20%;
+  background: white;
+}
+
+nav ul {
+  list-style: none;
+  background-color:black;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+nav li {
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+}
+
+nav a:hover {
+  background-color: #d1cfcf;
+}
+
+nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
+
+#landing {
+  background-color: #dddbdb;
+  height: 1000px;
+  margin-left: 12%;
+  margin-right: 12%;
+}
+
+#landing h1 {
+  padding-top: 30px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.landing-dash img,
+.landing-stats img,
+.landing-report img {
+  margin-left: 0;
+  margin-right: 0;
+  width: 65%;
+}
+
+.landing-item {
+  display: inline-block;
+}
+
+#landing img{
+ display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.customer-form {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-form {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+.dashboard-entry {
+  height: 1000px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dashboard input {
+  margin: 10px;
+}
+
+.dashboard select {
+  width: 173px;
+  margin: 10px;
+}
+
+.formFieldsWrapper {
+  height: 750px;
+}
+
+.dashboard .formFields {
+  display: inline-table;
+  width: 30%;
+  height: 740px;
+}
+
+.customer-item {
+  width: 100%;
+}
+
+.report-tracker {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.report-tracker h3 {
+  padding-left: 5%;
+  width: 40%;
+  background-color: #444;
+  color: white;
+}
+
+
+.report-tracker h1 , .report-tracker p{
+    display: block;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.report-tracker p{
+  color: #444;
+}
+
+.landing-dash, .landing-stats, .landing-report {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: inline-block;
+  width: 33%;
+}
+
+.landing-wrapper {
+  margin-top: 50px;
+}
+
+.report-tracker {
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  background: lightgrey;
+}
+
+.container {
+  margin: auto;
+  padding: 10px;
+  background: darkgray;
+  color: white;
+}
+
+.one {
+  float: left;
+  margin-left: 10%;
+}
+
+.two {
+  margin-left: 50%;
+}
+
+.report-tracker {
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  background: lightgrey;
+}
+
+.container {
+  margin: auto;
+  padding: 10px;
+  background: darkgray;
+  color: white;
+}
+.one {
+  float: left;
+  margin-left: 10%;
+}
+.two {
+  margin-left: 50%;
+}
+
+#report-container{
+  margin-bottom: 2%;
+}
+input {
+  display: inline;
+	font-style: normal;
+  font-variant: normal;
+  font-family: 'Trirong', serif;
+}
+
+button {
+  margin-top: 1%;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+  line-height: 26.4px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  color: darkred;
+  font-family: 'Trirong', serif;
+}
+
+button:hover {
+  background-color: grey; /* Green */
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  color: white;
+}
+
+h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  list-style: none;
+  background-color: black;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 60px;
+  border-bottom: 1px solid #888;
+  color: white;
+}
+
+.chart-data{
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+@media screen and (min-width: 600px) {
+  nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+  }
+
+  nav li {
+    display: inline-block;
+    margin-right: -4px;
+  }
+}

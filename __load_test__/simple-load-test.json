@@ -1,0 +1,26 @@
+{
+  "config": {
+    "target": "http://localhost:3000",
+    "phases": [
+      {
+        "duration": 5,
+        "arrivalRate": 20
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "flow": [
+        {
+          "post": {
+            "url": "/customer",
+            "json": {
+              "name": "us",
+              "date": "today"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
