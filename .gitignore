@@ -1,8 +1,9 @@
 # 401 JS
-db
+**/db
 **.env
 temp
 build
+.*
 
 # Created by https://www.gitignore.io/api/vim,osx,node,linux,windows
 ### Linux ###
@@ -142,4 +143,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+<<<<<<< HEAD
 # End of https://www.gitignore.io/api/vim,osx,node,linux,windows
+=======
+# End of https://www.gitignore.io/api/vim,osx,node,linux,windows
+>>>>>>> 4e95f3db59354c11591269e7fc9fb72a2ff6ff0f
