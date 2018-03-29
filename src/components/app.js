@@ -33,8 +33,5 @@ class App extends React.Component {
     );
   }
 };
-// {/* <Route path="/welcome/:auth" component={props =>
-//                  token ? <Redirect to="/dashboard"/> : <Landing {...props}/>}/> */}
-// {/* <Route path="/dashboard" component={Dashboard}/> */ }
 
 export default App;

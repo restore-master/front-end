@@ -6,7 +6,6 @@ export const reportGet = report => ({
 });
 
 export const reportGetAll = reports => dispatch => {
-  console.log('api-url:', __API_URL__);
   return superagent.get(`${__API_URL__}/report`)
     .then(response => {
       return dispatch(reportGet(response.body));
@@ -20,8 +19,6 @@ export const reportPassIdAction = id => ({
 });
 
 export const reportCreate = report => dispatch => {
-  console.log('apiurl:', __API_URL__);
-  console.log('REPORT+++ ', report);
   superagent.post(`${__API_URL__}/report/${report.customer}`)
     .send({
       customer: report.customer,
@@ -58,18 +55,6 @@ export const reportCreate = report => dispatch => {
     })
     .catch(console.error);
 };
-
-// export const createActionRequest = (picture) => (dispatch) => {
-//   let token = localStorage.getItem('token');
-
-//   return superagent.post(`${__API_URL__}${routes.PICTURES_ROUTE}`)
-//     .set('Authorization', `Bearer ${token}`)
-//     .field('description', picture.description)
-//     .attach('photo', picture.photo)
-//     .then(response => {
-//       return dispatch(createAction(response.body));
-//     });
-// };
 
 export const reportUpdate = report => ({
   type: 'REPORT_UPDATE',

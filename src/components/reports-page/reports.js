@@ -15,12 +15,10 @@ class Reports extends React.Component{
   };
 
   render(){
-    console.log('HELLO+++++========', this.props);
     return(
       <div className="report-tracker">
         <h1>Water Loss Tracker</h1>
         <p>Double Click the report for more details!</p>
-
 
         {renderIf(this.props.customer,
           this.props.customer.map(customer =>

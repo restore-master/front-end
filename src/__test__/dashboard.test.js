@@ -16,7 +16,6 @@ describe('<Dashboard />', function() {
     });
     afterAll(() => this.wrapper.unmount());
 
-    console.log(this.wrapper);
     it('should render two category items into the dom', () => {
       expect(this.wrapper.find('.dashboard').length).toEqual(0);
     });

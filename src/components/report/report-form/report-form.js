@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 
 class ReportForm extends React.Component {
   constructor(props) {
@@ -7,7 +7,6 @@ class ReportForm extends React.Component {
     this.state = this.props.report
       ? this.props.report
       : {
-        //Loss Details
         source: '',
         upperRooms: '',
         lowerRooms: '',
@@ -22,7 +21,6 @@ class ReportForm extends React.Component {
         crawlOrSlab: '',
         crawlOrAtticAccessLocation: '',
         contents: '',
-        // Considerations ie: allergies, authorization, etc
         accessPermissions: '',
         setLockBox: '',
         petsOrChildren: '',
@@ -31,17 +29,14 @@ class ReportForm extends React.Component {
         growth: '',
         odor: '',
         monitors: '',
-        // Address/survey/mailing
         lossIsMailingAddress: false,
         customerEmail: '',
         hearAboutUs: '',
         adjuster: '',
         customerAgent: '',
-        //Id
         customer: this.props.customer[0]._id,
       };
 
-    //handlers
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -52,10 +47,8 @@ class ReportForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log('handleSubmit this.state', this.state);
     this.props.onComplete(this.state);
     this.setState({
-      //Loss Details
       source: '',
       upperRooms: '',
       source: '',
@@ -72,7 +65,6 @@ class ReportForm extends React.Component {
       crawlOrSlab: '',
       crawlOrAtticAccessLocation: '',
       contents: '',
-      // Considerations ie: allergies, authorization, etc
       accessPermissions: '',
       setLockBox: '',
       petsOrChildren: '',
@@ -81,13 +73,11 @@ class ReportForm extends React.Component {
       growth: '',
       odor: '',
       monitors: '',
-      // Address/survey/mailing
       lossIsMailingAddress: false,
       customerEmail: '',
       hearAboutUs: '',
       adjuster: '',
       customerAgent: '',
-      //Id
       customer: this.props.customer[0]._id,
     });
   }
@@ -271,7 +261,6 @@ class ReportForm extends React.Component {
           </div>
           <button type='submit'>{this.props.buttonText}</button>
         </form>
-
       </div>
     );
   }

@@ -1,6 +1,6 @@
 import React from 'react';
-import { renderIf } from '../../lib/utils';
-import { connect } from 'react-redux';
+import {renderIf} from '../../lib/utils';
+import {connect} from 'react-redux';
 
 
 class Navbar extends React.Component {
@@ -8,7 +8,6 @@ class Navbar extends React.Component {
     super(props);
   }
   render() {
-    // console.log(this.action);
     return (
       <header>
         <nav className={'nav-bar'}>

@@ -1,12 +1,9 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import customerItem from '../customer/customer-item/customer-item';
-import { reportGetAll, reportGet } from '../../actions/report-actions';
-import { customerGetAll, customerGet } from '../../actions/customer-actions';
-import { Bar } from 'react-chartjs-2';
-
-
-
+import {reportGetAll, reportGet} from '../../actions/report-actions';
+import {customerGetAll, customerGet} from '../../actions/customer-actions';
+import {Bar} from 'react-chartjs-2';
 
 class Chart extends React.Component {
   constructor(props) {
@@ -98,8 +95,8 @@ class Chart extends React.Component {
   componentWillMount() {
     this.props.customerGetAll();
     this.props.reportGetAll();
-    console.log(this.props);
   }
+
   handleDoubleClick() {
     let Laminate = 0;
     let Hardwood = 0;
@@ -108,20 +105,19 @@ class Chart extends React.Component {
     let Vinyl = 0;
     let Slate = 0;
     let Other = 0;
-    let reports = this.props.customer.map(customer => customer.reports[0].flooringType );
+    let reports = this.props.customer.map(customer => customer.reports[0].flooringType);
     for (let i of reports) {
-      console.log(i);
       if (i === 'laminate') {
         Laminate ++ ;
-      } else if(i === 'hardwood') {
+      } else if (i === 'hardwood') {
         Hardwood ++;
       } else if (i === 'carpet') {
         Carpet ++;
-      }else if (i === 'tile') {
+      } else if (i === 'tile') {
         Tile ++;
-      }else if (i === 'vinyl') {
+      } else if (i === 'vinyl') {
         Vinyl ++;
-      }else if (i === 'slate') {
+      } else if (i === 'slate') {
         Slate ++;
       } else {
         Other ++;
@@ -134,18 +130,17 @@ class Chart extends React.Component {
     let Instagram = 0;
     let Snapchat = 0;
     let Other2 = 0;
-    reports = this.props.customer.map(customer => customer.reports[0].hearAboutUs );
+    reports = this.props.customer.map(customer => customer.reports[0].hearAboutUs);
     for (let i of reports) {
-      console.log(i);
       if (i === 'linkedin') {
         LinkedIn ++ ;
-      } else if(i === 'facebook') {
+      } else if (i === 'facebook') {
         Facebook ++;
       } else if (i === 'twitter') {
         Twitter ++;
-      }else if (i === 'instagram') {
+      } else if (i === 'instagram') {
         Instagram ++;
-      }else {
+      } else {
         Other2 ++;
       }
     }
@@ -229,7 +224,6 @@ class Chart extends React.Component {
         },
       },
     });
-    console.log(this.props);
   }
 
   render() {

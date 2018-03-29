@@ -27,7 +27,7 @@ class Reports extends React.Component {
         onDoubleClick={this.handleDoubleClick}>
         <h3>Name: {this.props.customer.name} / Date: {this.props.customer.date}</h3>
         {this.state.view ? renderIf(this.props.customer.reports[0],
-          <div class='container'> 
+          <div className='container'> 
             <div class='one'> 
               <p>Source: {this.props.customer.reports[0].source}</p>
               <p>Upper-Rooms: {this.props.customer.reports[0].upperRooms}</p>
@@ -42,7 +42,7 @@ class Reports extends React.Component {
               <p>Foundation Type: {this.props.customer.reports[0].basement}</p>
               <p>Crawlspace or slab: {this.props.customer.reports[0].crawlOrSlab}</p>
             </div>
-            <div class='two'>
+            <div className='two'>
               <p>Crawl or Attic Location: {this.props.customer.reports[0].crawlOrAtticAccessLocation}</p>
               <p>Contents: {this.props.customer.reports[0].contents}</p>
               <p>Access Permission: {this.props.customer.reports[0].accessPermissions}</p>
