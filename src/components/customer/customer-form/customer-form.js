@@ -21,10 +21,6 @@ class CustomerForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.onComplete(this.state);
-<<<<<<< HEAD
-
-=======
->>>>>>> 423c5b8acf05ec238c2b8a7c28a0fe640ee3dc7c
 
     this.setState({
       name: '',
