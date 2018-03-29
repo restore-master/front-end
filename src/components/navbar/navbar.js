@@ -8,7 +8,6 @@ class Navbar extends React.Component {
     super(props);
   }
   render() {
-    // console.log(this.action);
     return (
       <header>
         <nav className={'nav-bar'}>

@@ -12,13 +12,10 @@ export default (state=initialState, action) => {
 
   case 'REPORT_ID_CREATE': return [...state, payload];
   case 'REPORT_CREATE':
-    // if(payload.name === '' || payload.cost == '') return new Error('submit a name and cost');
-    // state[payload.xId] = state[payload.xId].concat([payload]);
     return [...state, payload];
 
   case 'REPORT_GET': return payload;
   case 'REPORT_UPDATE':
-    // if(payload.name === '' || payload.cost == '') return new Error('submit a name and cost');
     let customerStateUpdate = state[payload.customer].map(
       report => report._id === payload._id ? payload : report);
     return {...state, [payload.customer]: customerStateUpdate};

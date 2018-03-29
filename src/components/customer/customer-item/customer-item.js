@@ -55,9 +55,6 @@ class CustomerItem extends React.Component {
   };
 }
 
-// {renderIf(this.props.ys[this.props.x.id].length > 0,
-//   this.props.ys[this.props.x.id].map(y => <YItem key={y.id} y={y} />)
-// )}
 const mapStateToProps = state => ({
   customer: state.customer,
   report: state.report,

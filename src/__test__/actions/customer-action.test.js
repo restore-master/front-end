@@ -11,17 +11,6 @@ describe('customer actions', () => {
     expect(action.payload).toHaveProperty('date');
   });
 
-  //GETALL
-
-  //CREATE
-  // it('should create an action to add to a customer', () => {
-  //   let customer = {name: 'reddy', date: 'teddy'};
-  //   let action = actions.customerCreate(customer);
-
-  //   expect(action.type).toEqual('CUSTOMER_CREATE');
-  //   expect(action.payload).toHaveProperty('name');
-  //   expect(action.payload).toHaveProperty('date');
-  // });
   it('should create an action to pass customer Id returned form create', () => {
     let customer = {name: 'bye', date: '850'};
     let action = actions.customerPassIdAction(customer);
