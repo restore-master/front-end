@@ -6,7 +6,6 @@ export const reportGet = report => ({
 });
 
 export const reportGetAll = reports => dispatch => {
-  console.log('api-url:', __API_URL__);
   return superagent.get(`${__API_URL__}/report`)
     .then(response => {
       return dispatch(reportGet(response.body));
@@ -20,8 +19,6 @@ export const reportPassIdAction = id => ({
 });
 
 export const reportCreate = report => dispatch => {
-  console.log('apiurl:', __API_URL__);
-  console.log('REPORT+++ ', report);
   superagent.post(`${__API_URL__}/report/${report.customer}`)
     .send({
       customer: report.customer,

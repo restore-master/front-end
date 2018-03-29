@@ -10,7 +10,10 @@ describe('customer actions', () => {
     expect(action.payload).toHaveProperty('name');
     expect(action.payload).toHaveProperty('date');
   });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 423c5b8acf05ec238c2b8a7c28a0fe640ee3dc7c
   it('should create an action to pass customer Id returned form create', () => {
     let customer = {name: 'bye', date: '850'};
     let action = actions.customerPassIdAction(customer);
@@ -25,7 +28,6 @@ describe('customer actions', () => {
     expect(action.payload.name).toEqual('bye');
     expect(action.payload.date).toEqual('850');
   });
-
   it('should create an action to delete a customer', () => {
     let customer = {name: 'bye', date: '850'};
     let action = actions.customerDelete(customer);
@@ -33,7 +35,6 @@ describe('customer actions', () => {
     expect(action.type).toEqual('CUSTOMER_DELETE');
     expect(action.payload.name).toBe('bye');
   });
-
   it('should create an action to reset customers', () => {
     let action = actions.customerReset();
 

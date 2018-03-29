@@ -1,6 +1,6 @@
 import React from 'react';
-import { renderIf } from '../../lib/utils';
-import { connect } from 'react-redux';
+import {renderIf} from '../../lib/utils';
+import {connect} from 'react-redux';
 
 
 class Navbar extends React.Component {

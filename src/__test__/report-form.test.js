@@ -1,7 +1,7 @@
 import React from 'react';
 import {configure, shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { Provider } from 'react-redux';
+import {Provider} from 'react-redux';
 import createStore from '../lib/store';
 import ReportForm from '../components/report/report-form/report-form';
 require('jest');
